@@ -1,0 +1,3531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD BITES | Mastering English One Recipe at a Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES & BRIGHTER MASTERCLASS LUXURY DESIGN SYSTEM
+           ========================================================================== */
+        :root {
+            --navy-deep: #132238;
+            --navy-surface: #1B304E;
+            --navy-card: rgba(28, 48, 77, 0.90);
+            --navy-card-solid: #203759;
+            --navy-border: rgba(255, 255, 255, 0.18);
+
+            --warm-gold: #E2B165;
+            --warm-gold-light: #F9DFB2;
+            --colombia-yellow: #FCD116;
+            --mexico-green: #007A53;
+            --mexico-green-bright: #10B981;
+            --japan-red: #C8102E;
+            --japan-red-bright: #FB7185;
+            --france-blue: #0066CC;
+            --france-blue-bright: #60A5FA;
+
+            --text-primary: #FFFFFF;
+            --text-secondary: #E2E8F0;
+            --text-muted: #CBD5E1;
+
+            --glass-blur: blur(18px);
+            --shadow-premium: 0 25px 50px -12px rgba(7, 15, 28, 0.48);
+            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-lg: 22px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+        }
+
+        /* ==========================================================================
+           2. RESET & BASE STYLES
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--navy-deep);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--navy-deep);
+            background-image:
+                linear-gradient(180deg, rgba(16, 30, 52, 0.84) 0%, rgba(20, 36, 60, 0.80) 45%, rgba(14, 26, 44, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=85');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ==========================================================================
+           3. TOP NAVIGATION BAR & BILINGUAL SWITCHER
+           ========================================================================== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(19, 34, 56, 0.94);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: 1px solid var(--navy-border);
+            padding: 0.9rem 3%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .brand-emblem {
+            width: 56px;
+            height: 58px;
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(28, 48, 77, 0.96), rgba(16, 29, 49, 0.98));
+            border: 1.5px solid rgba(226, 177, 101, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            box-shadow: 0 6px 22px rgba(226, 177, 101, 0.32);
+            flex-shrink: 0;
+        }
+
+        .brand-emblem svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: 0.14em;
+            color: var(--text-primary);
+        }
+
+        .brand-tag {
+            font-size: 0.68rem;
+            color: var(--warm-gold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-item {
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.55rem 0.95rem;
+            border-radius: 999px;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .nav-item:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item.active {
+            background: rgba(226, 177, 101, 0.22);
+            color: var(--warm-gold-light);
+            border: 1px solid rgba(226, 177, 101, 0.5);
+        }
+
+        .nav-item.trial-highlight {
+            background: linear-gradient(135deg, rgba(252, 209, 22, 0.2), rgba(226, 177, 101, 0.25));
+            border: 1px solid rgba(252, 209, 22, 0.55);
+            color: var(--colombia-yellow);
+        }
+
+        .nav-item.trial-highlight.active {
+            background: var(--colombia-yellow);
+            color: #132238;
+            font-weight: 800;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--navy-border);
+            border-radius: 999px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            transition: var(--transition-smooth);
+        }
+
+        .lang-btn.active {
+            background: var(--warm-gold);
+            color: #132238;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            padding: 0.55rem 0.85rem;
+            border-radius: var(--radius-sm);
+            font-size: 1.25rem;
+        }
+
+        /* ==========================================================================
+           4. MULTI-PAGE VIEWPORT ARCHITECTURE
+           ========================================================================== */
+        main {
+            flex: 1;
+            width: 100%;
+        }
+
+        .page-view {
+            display: none;
+            animation: pageFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            padding-bottom: 5rem;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1460px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 3.5rem;
+            padding-top: 3.5rem;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--warm-gold);
+            background: rgba(226, 177, 101, 0.14);
+            border: 1px solid rgba(226, 177, 101, 0.35);
+            padding: 0.45rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* ==========================================================================
+           5. BUTTONS & INTERACTIVE CONTROLS
+           ========================================================================== */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--warm-gold), #F4C977);
+            color: #132238;
+            font-weight: 800;
+            font-size: 0.96rem;
+            padding: 0.95rem 1.9rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 12px 30px rgba(226, 177, 101, 0.35);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 38px rgba(226, 177, 101, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-weight: 600;
+            font-size: 0.96rem;
+            padding: 0.95rem 1.9rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: var(--warm-gold);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           6. HOME PAGE: CINEMATIC HERO + INTERACTIVE MAP + SUMMARY & STORIES
+           ========================================================================== */
+        .hero-cinematic {
+            position: relative;
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1920&q=85');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.52) saturate(1.18);
+            transform: scale(1.03);
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(95deg, rgba(19, 34, 56, 0.92) 0%, rgba(19, 34, 56, 0.72) 54%, rgba(19, 34, 56, 0.30) 100%);
+            z-index: 1;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.25fr 0.85fr;
+            gap: 3.5rem;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .hero-headline {
+            font-size: clamp(3rem, 5.6vw, 4.9rem);
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            line-height: 1.04;
+        }
+
+        .hero-headline span {
+            color: var(--warm-gold);
+            font-style: italic;
+        }
+
+        .hero-sub {
+            font-size: 1.18rem;
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin-bottom: 2.1rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.75rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--colombia-yellow);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-showcase-card {
+            background: rgba(24, 42, 68, 0.88);
+            backdrop-filter: blur(22px);
+            border: 1px solid rgba(226, 177, 101, 0.45);
+            border-radius: var(--radius-lg);
+            padding: 1.65rem;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .showcase-thumb {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 215px;
+            margin-bottom: 1.2rem;
+        }
+
+        .showcase-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .showcase-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(19, 34, 56, 0.88);
+            color: var(--colombia-yellow);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(252, 209, 22, 0.45);
+        }
+
+        /* Interactive World Map Section (Side-by-Side Unobstructed Layout) */
+        .map-section {
+            padding: 4.5rem 0 2rem;
+        }
+
+        .map-container-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .map-layout-split {
+            display: grid;
+            grid-template-columns: 1.55fr 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .map-canvas-area {
+            position: relative;
+            width: 100%;
+            height: 410px;
+            background: radial-gradient(circle at center, #23416B 0%, #13243D 100%);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            overflow: hidden;
+        }
+
+        .world-svg {
+            width: 100%;
+            height: 100%;
+            opacity: 0.92;
+        }
+
+        .flight-route-path {
+            stroke-dasharray: 8 6;
+            animation: dashFlow 22s linear infinite;
+        }
+
+        @keyframes dashFlow {
+            to {
+                stroke-dashoffset: -280;
+            }
+        }
+
+        .country-pin {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(15, 29, 49, 0.95);
+            border: 2px solid var(--warm-gold);
+            padding: 0.52rem 1.05rem;
+            border-radius: 999px;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 0.88rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: var(--transition-smooth);
+            z-index: 5;
+        }
+
+        .pin-step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.14);
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .country-pin:hover, .country-pin.active-pin {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--warm-gold);
+            color: #132238;
+        }
+
+        .country-pin:hover .pin-step, .country-pin.active-pin .pin-step {
+            background: #132238;
+            color: var(--warm-gold);
+        }
+
+        .pin-pulse {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulseRing 1.8s infinite;
+        }
+
+        @keyframes pulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(252, 209, 22, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(252, 209, 22, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(252, 209, 22, 0); }
+        }
+
+        .pin-mexico { top: 44%; left: 19.5%; border-color: var(--mexico-green-bright); }
+        .pin-colombia { top: 61%; left: 28.5%; border-color: var(--colombia-yellow); }
+        .pin-japan { top: 38%; left: 84.5%; border-color: var(--japan-red-bright); }
+        .pin-france { top: 30%; left: 49.5%; border-color: var(--france-blue-bright); }
+
+        .map-inspector-card {
+            background: rgba(18, 33, 55, 0.94);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 177, 101, 0.5);
+            border-radius: var(--radius-md);
+            padding: 1.85rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Home Executive Bridges */
+        .home-bridges-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .bridge-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 1.85rem;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bridge-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--warm-gold);
+            box-shadow: var(--shadow-premium);
+        }
+
+        /* ==========================================================================
+           7. UNIFIED LEARNING JOURNEY & MODULES PAGE
+           ========================================================================== */
+        .timeline-track {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .level-node {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            text-align: left;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .level-node:hover, .level-node.active {
+            transform: translateY(-6px);
+            border-color: var(--warm-gold);
+            background: rgba(34, 58, 92, 0.96);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .level-pill {
+            display: inline-block;
+            font-weight: 800;
+            font-size: 0.78rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
+        .journey-detail-panel {
+            background: var(--navy-card);
+            border: 1px solid rgba(226, 177, 101, 0.45);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            box-shadow: var(--shadow-premium);
+            margin-bottom: 4.5rem;
+        }
+
+        .detail-list {
+            list-style: none;
+            display: grid;
+            gap: 0.85rem;
+            margin-top: 1.25rem;
+        }
+
+        .detail-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        .detail-list li span.check {
+            color: var(--colombia-yellow);
+            font-weight: 800;
+        }
+
+        /* Modules Grid */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.25rem;
+        }
+
+        .module-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--warm-gold);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .module-hero-img {
+            position: relative;
+            height: 245px;
+            overflow: hidden;
+        }
+
+        .module-hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .module-card:hover .module-hero-img img {
+            transform: scale(1.06);
+        }
+
+        .module-level-tag {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 0.4rem 0.95rem;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            backdrop-filter: blur(10px);
+        }
+
+        .module-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .module-project-box {
+            margin-top: 1.4rem;
+            padding: 1rem 1.2rem;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 3px solid var(--warm-gold);
+        }
+
+        /* ==========================================================================
+           8. FREE MODULE TRIALS (5-STAGE STEPPER + LIVE WORD TRANSLATION)
+           ========================================================================== */
+        .trial-selector-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.25rem;
+        }
+
+        .trial-tab-btn {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            color: var(--text-secondary);
+            padding: 1.15rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            text-align: left;
+            transition: var(--transition-smooth);
+        }
+
+        .trial-tab-btn:hover {
+            border-color: var(--warm-gold);
+            color: var(--text-primary);
+        }
+
+        .trial-tab-btn.active {
+            background: linear-gradient(135deg, rgba(226, 177, 101, 0.22), rgba(28, 48, 77, 0.95));
+            border: 2px solid var(--warm-gold);
+            color: var(--text-primary);
+        }
+
+        .trial-workspace {
+            background: var(--navy-card);
+            border: 1px solid rgba(226, 177, 101, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .progress-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 1px solid var(--navy-border);
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar-track {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.14);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 0.6rem;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--colombia-yellow), var(--warm-gold));
+            border-radius: 999px;
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .achievement-badge-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(16, 30, 50, 0.85);
+            border: 1px solid rgba(252, 209, 22, 0.45);
+            padding: 0.85rem 1.35rem;
+            border-radius: var(--radius-md);
+        }
+
+        .badge-medal {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(252, 209, 22, 0.15);
+            border: 2px dashed var(--colombia-yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            transition: var(--transition-smooth);
+        }
+
+        .badge-medal.unlocked {
+            background: linear-gradient(135deg, var(--colombia-yellow), var(--warm-gold));
+            border-style: solid;
+            color: #132238;
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(252, 209, 22, 0.55);
+        }
+
+        .stage-stepper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .stage-pill {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1rem;
+            text-align: left;
+            color: var(--text-muted);
+            transition: var(--transition-smooth);
+        }
+
+        .stage-pill.current {
+            background: rgba(226, 177, 101, 0.2);
+            border-color: var(--warm-gold);
+            color: var(--text-primary);
+        }
+
+        .stage-pill.completed {
+            border-color: var(--mexico-green-bright);
+            color: #A7F3D0;
+        }
+
+        .stage-content-box {
+            background: rgba(16, 30, 50, 0.78);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem;
+            min-height: 290px;
+        }
+
+        .vocab-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-top: 1.1rem;
+        }
+
+        .vocab-chip {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            color: var(--text-primary);
+            padding: 0.7rem 1.2rem;
+            border-radius: 999px;
+            font-size: 0.93rem;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .vocab-chip:hover {
+            border-color: var(--warm-gold);
+            transform: translateY(-2px);
+        }
+
+        .vocab-chip.collected {
+            background: rgba(252, 209, 22, 0.22);
+            border-color: var(--colombia-yellow);
+            color: var(--colombia-yellow);
+            box-shadow: 0 6px 18px rgba(252, 209, 22, 0.2);
+        }
+
+        .module-earned-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: linear-gradient(135deg, var(--colombia-yellow), var(--warm-gold));
+            color: #132238;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-left: 0.45rem;
+            box-shadow: 0 4px 12px rgba(252, 209, 22, 0.35);
+        }
+
+        .all-complete-banner {
+            margin-top: 1.75rem;
+            background: linear-gradient(135deg, rgba(252, 209, 22, 0.2), rgba(28, 48, 77, 0.96));
+            border: 2px solid var(--colombia-yellow);
+            border-radius: var(--radius-lg);
+            padding: 1.85rem 2.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            box-shadow: 0 20px 45px rgba(252, 209, 22, 0.22);
+            animation: pageFadeIn 0.45s ease forwards;
+        }
+
+        .quiz-option {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--navy-border);
+            color: var(--text-primary);
+            padding: 0.85rem 1.15rem;
+            border-radius: var(--radius-sm);
+            margin-top: 0.65rem;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .quiz-option.correct {
+            background: rgba(16, 185, 129, 0.22);
+            border-color: #10B981;
+            color: #A7F3D0;
+        }
+
+        .quiz-option.wrong {
+            background: rgba(239, 68, 68, 0.22);
+            border-color: #EF4444;
+        }
+
+        /* ==========================================================================
+           9. MEET THE TEAM (EQUAL-HEIGHT CARDS WITH CULINARY COUNTRY EMBLEMS)
+           ========================================================================== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.75rem;
+            align-items: stretch;
+        }
+
+        .team-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--warm-gold);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .team-banner {
+            height: 76px;
+            background: linear-gradient(135deg, rgba(226, 177, 101, 0.32), rgba(28, 48, 77, 0.96));
+            position: relative;
+        }
+
+        .team-photo-wrapper {
+            position: relative;
+            height: 290px;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(226, 177, 101, 0.35);
+            background: #132238;
+        }
+
+        .team-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .team-card:hover .team-photo-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .team-food-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 2px solid var(--warm-gold);
+            background: rgba(19, 34, 56, 0.92);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+        }
+
+        .team-info {
+            padding: 1.45rem 1.65rem 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fun-fact-pill {
+            margin-top: 1.15rem;
+            background: rgba(252, 209, 22, 0.12);
+            border: 1px solid rgba(252, 209, 22, 0.35);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 0.9rem;
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+        }
+
+        /* ==========================================================================
+           10. PRICING, COMPANION BOOK, UPCOMING MODULES, FAQ & STORIES
+           ========================================================================== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 2.25rem;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-card.featured {
+            background: linear-gradient(160deg, rgba(35, 60, 96, 0.96), rgba(19, 34, 56, 0.98));
+            border: 2px solid var(--warm-gold);
+            box-shadow: 0 25px 60px rgba(226, 177, 101, 0.22);
+        }
+
+        .best-value-badge {
+            position: absolute;
+            top: -14px;
+            right: 28px;
+            background: linear-gradient(135deg, var(--colombia-yellow), var(--warm-gold));
+            color: #132238;
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+        }
+
+        .single-module-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.85rem;
+            margin: 1.5rem 0;
+        }
+
+        .dest-choice {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--navy-border);
+            color: var(--text-primary);
+            padding: 0.9rem;
+            border-radius: var(--radius-md);
+            text-align: left;
+            transition: var(--transition-smooth);
+        }
+
+        .dest-choice.selected {
+            border-color: var(--colombia-yellow);
+            background: rgba(252, 209, 22, 0.16);
+        }
+
+        .upcoming-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .upcoming-card {
+            background: var(--navy-card);
+            border: 1px solid rgba(226, 177, 101, 0.32);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            transition: var(--transition-smooth);
+        }
+
+        .upcoming-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--colombia-yellow);
+        }
+
+        .addon-box {
+            margin-top: 2.25rem;
+            background: linear-gradient(135deg, rgba(226, 177, 101, 0.18), rgba(28, 48, 77, 0.94));
+            border: 1px solid rgba(226, 177, 101, 0.5);
+            border-radius: var(--radius-lg);
+            padding: 2rem 2.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            max-width: 1180px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FAQ Accordion */
+        .faq-list {
+            max-width: 880px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: transparent;
+            color: var(--text-primary);
+            padding: 1.35rem 1.65rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            color: var(--text-secondary);
+            padding: 0 1.65rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 260px;
+            padding: 0 1.65rem 1.4rem;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            color: var(--warm-gold);
+        }
+
+        /* Testimonial Carousel */
+        .carousel-wrapper {
+            max-width: 1020px;
+            margin: 0 auto;
+            background: var(--navy-card);
+            border: 1px solid rgba(226, 177, 101, 0.38);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .testimonial-slide {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2.25rem;
+            align-items: center;
+        }
+
+        .student-photo {
+            width: 185px;
+            height: 185px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--warm-gold);
+            margin: 0 auto;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--navy-border);
+        }
+
+        /* Contact Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2.5rem;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--navy-card);
+            border: 1px solid var(--navy-border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.45rem;
+        }
+
+        .form-control {
+            width: 100%;
+            background: rgba(16, 30, 50, 0.88);
+            border: 1px solid var(--navy-border);
+            color: var(--text-primary);
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--warm-gold);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            background: #1B304E;
+            border: 1px solid var(--colombia-yellow);
+            color: var(--text-primary);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+            z-index: 3000;
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -140%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 90vw;
+            width: max-content;
+        }
+
+        .toast.show {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        footer {
+            border-top: 1px solid var(--navy-border);
+            background: rgba(14, 26, 44, 0.96);
+            padding: 2.5rem 3%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* ==========================================================================
+           11. RESPONSIVE BREAKPOINTS
+           ========================================================================== */
+        @media (max-width: 1120px) {
+            .hero-grid, .journey-detail-panel, .pricing-grid, .contact-grid, .map-layout-split {
+                grid-template-columns: 1fr;
+            }
+            .modules-grid, .team-grid, .home-bridges-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .timeline-track, .trial-selector-tabs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stage-stepper, .upcoming-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 860px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(19, 34, 56, 0.98);
+                flex-direction: column;
+                padding: 1.25rem;
+                border-bottom: 1px solid var(--navy-border);
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .testimonial-slide {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .modules-grid, .team-grid, .home-bridges-grid, .stage-stepper, .upcoming-grid {
+                grid-template-columns: 1fr;
+            }
+            .map-canvas-area {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================================================================
+         NAVIGATION BAR (MULTI-PAGE ROUTING + EN/ES LANGUAGE SWITCHER)
+         ====================================================================== -->
+    <header class="navbar">
+        <div class="brand" onclick="navigateTo('home')">
+            <div class="brand-emblem" aria-label="World Bites Logo: Mundo con gorro de chef arriba y libro abierto debajo">
+                <svg viewBox="0 0 84 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="wbOceanTop" x1="24" y1="22" x2="60" y2="58" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#0284C7"/>
+                        </linearGradient>
+                        <linearGradient id="wbGoldCover" x1="12" y1="58" x2="72" y2="82" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#FCD116"/>
+                            <stop offset="100%" stop-color="#E2B165"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Globe (Mundo) in the middle-top -->
+                    <circle cx="42" cy="40" r="18" fill="url(#wbOceanTop)" stroke="#F9DFB2" stroke-width="1.6"/>
+                    <!-- Continents -->
+                    <path d="M33 29C36 28 39 31 38 35C37 38 40 40 39 44C38 48 35 51 33 49C31 46 29 41 30 36C31 32 31 30 33 29Z" fill="#10B981"/>
+                    <path d="M46 28C50 27 55 30 56 35C57 39 54 43 51 43C49 43 48 47 46 47C44 47 44 41 45 37C46 33 44 29 46 28Z" fill="#10B981"/>
+                    <!-- Globe Latitude Arc -->
+                    <ellipse cx="42" cy="40" rx="18" ry="6" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+                    <!-- Chef Hat (Gorro de Chef) crowning the Globe -->
+                    <path d="M29 18C26 17 25 12.5 28 10C29.5 6 35 5 38 7.5C40 4 44 4 46 7.5C49 5 54.5 6 56 10C59 12.5 58 17 55 18L53 24H31L29 18Z" fill="#FFFFFF" stroke="#E2B165" stroke-width="1.4" stroke-linejoin="round"/>
+                    <rect x="31" y="21.5" width="22" height="3.2" rx="1.4" fill="#FCD116"/>
+
+                    <!-- Open Book (Libro Abierto) directly underneath the Globe -->
+                    <!-- Book Gold Cover -->
+                    <path d="M12 61L42 64.5L72 61V80.5L42 84L12 80.5V61Z" fill="url(#wbGoldCover)" stroke="#132238" stroke-width="1.2" stroke-linejoin="round"/>
+                    <!-- Book Cream Open Pages -->
+                    <path d="M15 58.5C24 58.5 34 60 42 63C50 60 60 58.5 69 58.5V77.5C60 77.5 50 79 42 82C34 79 24 77.5 15 77.5V58.5Z" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2" stroke-linejoin="round"/>
+                    <!-- Center Spine -->
+                    <line x1="42" y1="63" x2="42" y2="82" stroke="#B45309" stroke-width="1.5"/>
+                    <!-- Clean Page Lines -->
+                    <line x1="20" y1="64" x2="37" y2="66" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="20" y1="69" x2="37" y2="71" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="20" y1="74" x2="35" y2="75.5" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+
+                    <line x1="47" y1="66" x2="64" y2="64" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="47" y1="71" x2="64" y2="69" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+                    <line x1="49" y1="75.5" x2="64" y2="74" stroke="#CBD5E1" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">WORLD BITES</span>
+                <span class="brand-tag" data-i18n="tagline">Mastering English One Recipe at a Time</span>
+            </div>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <button class="nav-item active" data-page="home" onclick="navigateTo('home')" data-i18n="nav_home">Home</button>
+            <button class="nav-item" data-page="journey" onclick="navigateTo('journey')" data-i18n="nav_journey">Journey & Modules</button>
+            <button class="nav-item trial-highlight" data-page="trials" onclick="navigateTo('trials')" data-i18n="nav_trials">✨ Free Module Trials</button>
+            <button class="nav-item" data-page="team" onclick="navigateTo('team')" data-i18n="nav_team">Meet the Team</button>
+            <button class="nav-item" data-page="pricing" onclick="navigateTo('pricing')" data-i18n="nav_pricing">Pricing & Enrollment</button>
+            <button class="nav-item" data-page="faq" onclick="navigateTo('faq')" data-i18n="nav_faq">FAQ</button>
+            <button class="nav-item" data-page="contact" onclick="navigateTo('contact')" data-i18n="nav_contact">Contact</button>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="lang-toggle" role="group" aria-label="Language Switcher">
+                <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" id="btn-es" onclick="setLanguage('es')">ES</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================================================================
+             PAGE 1: HOME (CINEMATIC HERO, UNOBSTRUCTED MAP, BRIDGES, STORIES)
+             ================================================================== -->
+        <section id="page-home" class="page-view active">
+            <div class="hero-cinematic">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="container hero-grid">
+                    <div>
+                        <div class="eyebrow">🌍 <span data-i18n="hero_eyebrow">CULINARY ENGLISH COURSE · A1 TO B2</span></div>
+                        <h1 class="hero-headline">
+                            <span data-i18n="hero_title_1">Travel the World.</span><br>
+                            <span data-i18n="hero_title_2">Learn English.</span>
+                        </h1>
+                        <p class="hero-sub" data-i18n="hero_sub">
+                            Discover English through international gastronomy and cultural experiences. Cook authentic dishes, master real-world fluency, and earn global CEFR credentials.
+                        </p>
+                        <div class="hero-cta-group">
+                            <button class="btn-primary" onclick="navigateTo('trials')" data-i18n="cta_start">
+                                Start Your Journey →
+                            </button>
+                            <button class="btn-secondary" onclick="navigateTo('journey')" data-i18n="cta_explore">
+                                Explore the Curriculum
+                            </button>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div>
+                                <div class="stat-num" data-target="4">4</div>
+                                <div class="stat-label" data-i18n="stat_countries">Culinary Destinations</div>
+                            </div>
+                            <div>
+                                <div class="stat-num">A1 → B2</div>
+                                <div class="stat-label" data-i18n="stat_cefr">CEFR Progression</div>
+                            </div>
+                            <div>
+                                <div class="stat-num">98%</div>
+                                <div class="stat-label" data-i18n="stat_fluency">Speaking Confidence</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating MasterClass Preview Card -->
+                    <div class="hero-showcase-card">
+                        <div class="showcase-thumb">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Gourmet Culinary Masterclass">
+                            <span class="showcase-badge">★ MASTERCLASS EXPERIENCE</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="color: var(--warm-gold); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em;">INTERACTIVE LESSON PREVIEW</span>
+                            <span style="font-size: 0.8rem; color: var(--colombia-yellow);">🇨🇴 A2 Prepare</span>
+                        </div>
+                        <h3 style="font-size: 1.55rem; margin-bottom: 0.5rem;" data-i18n="card_preview_title">The Art of the Colombian Arepa</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;" data-i18n="card_preview_desc">
+                            Experience how sensory cooking verbs, cultural storytelling, and live challenges replace boring grammar drills.
+                        </p>
+                        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="navigateTo('trials')" data-i18n="card_preview_btn">
+                            Try Free Module Lessons Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive World Map Feature (Side-by-Side Unobstructed Layout) -->
+            <div class="container map-section">
+                <div class="section-header" style="padding-top: 1rem; margin-bottom: 2.25rem;">
+                    <div class="eyebrow">🗺️ <span data-i18n="map_eyebrow">INTERACTIVE GASTRONOMIC ATLAS</span></div>
+                    <h2 class="section-title" data-i18n="map_title">Hover or Click a Destination</h2>
+                    <p class="section-subtitle" data-i18n="map_sub">Explore how each country unlocks a new CEFR proficiency milestone through its signature cuisine.</p>
+                </div>
+
+                <div class="map-container-card">
+                    <div class="map-layout-split">
+                        <div class="map-canvas-area">
+                            <svg class="world-svg" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="landGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#355A8C" stop-opacity="0.78"/>
+                                        <stop offset="100%" stop-color="#1E385C" stop-opacity="0.88"/>
+                                    </linearGradient>
+                                    <linearGradient id="routeGrad" x1="195" y1="220" x2="845" y2="150" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#10B981"/>
+                                        <stop offset="33%" stop-color="#FCD116"/>
+                                        <stop offset="68%" stop-color="#FB7185"/>
+                                        <stop offset="100%" stop-color="#60A5FA"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- Cartographic Latitude & Longitude Grid -->
+                                <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
+                                    <line x1="0" y1="100" x2="1000" y2="100"/>
+                                    <line x1="0" y1="200" x2="1000" y2="200"/>
+                                    <line x1="0" y1="275" x2="1000" y2="275" stroke-dasharray="4 4" stroke="rgba(226,177,101,0.18)"/>
+                                    <line x1="0" y1="360" x2="1000" y2="360"/>
+                                    <line x1="200" y1="0" x2="200" y2="500"/>
+                                    <line x1="400" y1="0" x2="400" y2="500"/>
+                                    <line x1="600" y1="0" x2="600" y2="500"/>
+                                    <line x1="800" y1="0" x2="800" y2="500"/>
+                                </g>
+
+                                <!-- North & Central America -->
+                                <path d="M72 86 L138 64 L228 66 L284 96 L264 132 L242 156 L225 196 L205 218 L222 242 L252 262 L242 272 L208 250 L176 226 L154 192 L134 152 L96 122 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.28)" stroke-width="1.2"/>
+                                <!-- Greenland -->
+                                <path d="M312 42 L378 36 L396 72 L352 96 L316 82 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.22)" stroke-width="1.2"/>
+                                <!-- South America -->
+                                <path d="M258 274 L306 278 L354 316 L364 358 L334 414 L302 464 L282 462 L276 404 L256 348 L248 302 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.28)" stroke-width="1.2"/>
+                                <!-- UK & Ireland -->
+                                <path d="M454 126 L468 122 L474 142 L456 146 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.25)" stroke-width="1"/>
+                                <!-- Europe (including France) -->
+                                <path d="M472 152 L494 138 L516 112 L548 92 L582 98 L586 144 L568 176 L534 184 L506 178 L478 184 L466 168 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.28)" stroke-width="1.2"/>
+                                <!-- Africa -->
+                                <path d="M466 198 L528 196 L574 224 L594 268 L572 336 L538 394 L508 392 L496 332 L482 288 L452 262 L450 222 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.25)" stroke-width="1.2"/>
+                                <!-- Asia -->
+                                <path d="M584 96 L712 84 L836 98 L896 126 L868 164 L824 176 L806 218 L774 248 L732 252 L702 276 L678 242 L646 254 L616 226 L586 198 L578 156 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.28)" stroke-width="1.2"/>
+                                <!-- Japanese Archipelago -->
+                                <path d="M842 164 L856 156 L862 174 L848 198 L834 206 L832 188 Z" fill="url(#landGrad)" stroke="rgba(251,113,133,0.55)" stroke-width="1.4"/>
+                                <!-- Indonesia / Southeast Islands -->
+                                <path d="M726 286 L768 292 L804 304 L792 316 L742 308 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.22)" stroke-width="1"/>
+                                <!-- Australia -->
+                                <path d="M778 338 L848 332 L884 366 L872 414 L816 422 L776 392 Z" fill="url(#landGrad)" stroke="rgba(226,177,101,0.25)" stroke-width="1.2"/>
+
+                                <!-- Culinary Flight Route: 1. Mexico -> 2. Colombia -> 3. Japan -> 4. France -->
+                                <!-- Leg 1: Mexico (195,220) -> Colombia (285,305) -->
+                                <path d="M 195 220 Q 225 278 285 305" stroke="url(#routeGrad)" stroke-width="3" fill="none" class="flight-route-path"/>
+                                <!-- Leg 2: Colombia (285,305) -> Japan (845,190) across Southern Hemisphere / Indian-Pacific Arc -->
+                                <path d="M 285 305 C 460 395, 690 345, 845 190" stroke="url(#routeGrad)" stroke-width="3" fill="none" class="flight-route-path"/>
+                                <!-- Leg 3: Japan (845,190) -> France (495,150) over Eurasia -->
+                                <path d="M 845 190 Q 685 95 495 150" stroke="url(#routeGrad)" stroke-width="3" fill="none" class="flight-route-path"/>
+
+                                <!-- Route Destination Anchor Dots -->
+                                <circle cx="195" cy="220" r="4.5" fill="#10B981"/>
+                                <circle cx="285" cy="305" r="4.5" fill="#FCD116"/>
+                                <circle cx="845" cy="190" r="4.5" fill="#FB7185"/>
+                                <circle cx="495" cy="150" r="4.5" fill="#60A5FA"/>
+                            </svg>
+
+                            <button class="country-pin pin-mexico active-pin" onmouseenter="inspectCountry('mx')" onclick="inspectCountry('mx')">
+                                <span class="pin-step">1</span> 🇲🇽 Mexico
+                            </button>
+
+                            <button class="country-pin pin-colombia" onmouseenter="inspectCountry('co')" onclick="inspectCountry('co')">
+                                <span class="pin-step">2</span> 🇨🇴 Colombia
+                            </button>
+
+                            <button class="country-pin pin-japan" onmouseenter="inspectCountry('jp')" onclick="inspectCountry('jp')">
+                                <span class="pin-step">3</span> 🇯🇵 Japan
+                            </button>
+
+                            <button class="country-pin pin-france" onmouseenter="inspectCountry('fr')" onclick="inspectCountry('fr')">
+                                <span class="pin-step">4</span> 🇫🇷 France
+                            </button>
+                        </div>
+
+                        <!-- Side-by-side Inspector Card -->
+                        <div class="map-inspector-card" id="mapInspectorCard">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
+                                    <div style="display: flex; align-items: center; gap: 0.65rem;">
+                                        <span id="insp-flag" style="font-size: 2.2rem;">🇲🇽</span>
+                                        <h3 id="insp-country" style="font-size: 1.85rem;">Mexico</h3>
+                                    </div>
+                                    <span id="insp-level" style="background: rgba(16, 185, 129, 0.22); color: #6EE7B7; border: 1px solid #10B981; padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800;">LEVEL A1 · DISCOVER</span>
+                                </div>
+
+                                <div style="font-size: 0.78rem; font-weight: 800; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem;" data-i18n="lbl_theme">Theme:</div>
+                                <div id="insp-theme" style="font-weight: 700; font-size: 1.05rem; margin-bottom: 1rem;">Street Gastronomy &amp; Sensory Basics</div>
+
+                                <p id="insp-goal" style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.65;">
+                                    Master essential food vocabulary, polite ordering, ingredients, and descriptive flavors while designing your own authentic Mexican menu.
+                                </p>
+                            </div>
+
+                            <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1.5rem;" onclick="openTrialFor(document.querySelector('.country-pin.active-pin')?.classList.contains('pin-colombia') ? 'co' : document.querySelector('.country-pin.active-pin')?.classList.contains('pin-japan') ? 'jp' : document.querySelector('.country-pin.active-pin')?.classList.contains('pin-france') ? 'fr' : 'mx')" data-i18n="insp_cta">
+                                Launch Free Trial →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Executive Bridges -->
+                <div class="home-bridges-grid">
+                    <div class="bridge-card" onclick="navigateTo('journey')">
+                        <div>
+                            <div style="font-size: 1.85rem; margin-bottom: 0.75rem;">🧭</div>
+                            <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;" data-i18n="bridge1_title">Journey &amp; Modules</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary);" data-i18n="bridge1_desc">Explore the complete A1 → B2 roadmap and all 4 culinary destination projects.</p>
+                        </div>
+                        <span style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 700; margin-top: 1.25rem;" data-i18n="bridge_cta">Explore →</span>
+                    </div>
+
+                    <div class="bridge-card" onclick="navigateTo('trials')">
+                        <div>
+                            <div style="font-size: 1.85rem; margin-bottom: 0.75rem;">✨</div>
+                            <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;" data-i18n="bridge2_title">5-Stage Free Trials</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary);" data-i18n="bridge2_desc">Experience interactive lessons step-by-step and unlock country achievement badges.</p>
+                        </div>
+                        <span style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 700; margin-top: 1.25rem;" data-i18n="bridge_cta">Explore →</span>
+                    </div>
+
+                    <div class="bridge-card" onclick="navigateTo('team')">
+                        <div>
+                            <div style="font-size: 1.85rem; margin-bottom: 0.75rem;">👨‍🏫</div>
+                            <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;" data-i18n="bridge3_title">Culinary Mentors</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary);" data-i18n="bridge3_desc">Meet Santiago, Maira, Sharon, and Juan David—your cultural and linguistic guides.</p>
+                        </div>
+                        <span style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 700; margin-top: 1.25rem;" data-i18n="bridge_cta">Explore →</span>
+                    </div>
+
+                    <div class="bridge-card" onclick="navigateTo('pricing')">
+                        <div>
+                            <div style="font-size: 1.85rem; margin-bottom: 0.75rem;">🎟️</div>
+                            <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;" data-i18n="bridge4_title">Plans &amp; Companion Book</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary);" data-i18n="bridge4_desc">Enroll in the complete 4-module passport or choose a single destination + recipe book.</p>
+                        </div>
+                        <span style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 700; margin-top: 1.25rem;" data-i18n="bridge_cta">View Plans →</span>
+                    </div>
+                </div>
+
+                <!-- Student Success Stories & Upcoming Modules on Home -->
+                <div style="margin-top: 4.5rem;">
+                    <div class="section-header" style="padding-top: 0;">
+                        <div class="eyebrow">🏆 <span data-i18n="stories_eyebrow">GLOBAL ALUMNI IMPACT</span></div>
+                        <h2 class="section-title" data-i18n="stories_title">Student Success Stories</h2>
+                        <p class="section-subtitle" data-i18n="stories_sub">Real learners who transformed their English fluency through international gastronomy.</p>
+                    </div>
+
+                    <div class="carousel-wrapper">
+                        <div id="testimonialSlide"></div>
+
+                        <div class="carousel-controls">
+                            <div id="carouselDots" style="display: flex; gap: 0.5rem;"></div>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <button class="btn-secondary" style="padding: 0.65rem 1.2rem;" onclick="prevStory()">←</button>
+                                <button class="btn-primary" style="padding: 0.65rem 1.2rem;" onclick="nextStory()">→</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Culinary Modules -->
+                    <div style="margin-top: 3.5rem;">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <div class="eyebrow">🚀 <span data-i18n="upcoming_eyebrow">COMING SOON · EXPANDING ACADEMY</span></div>
+                                <h3 style="font-size: clamp(1.6rem, 2.5vw, 2.1rem);" data-i18n="upcoming_title">Future Culinary Specializations & Companion Book</h3>
+                            </div>
+                            <button class="btn-secondary" onclick="navigateTo('pricing')" data-i18n="upcoming_cta">Explore Book & Plans →</button>
+                        </div>
+
+                        <div class="upcoming-grid">
+                            <div class="upcoming-card">
+                                <span style="font-size: 0.74rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;">COMING SOON · MODULE 05</span>
+                                <h4 style="font-size: 1.25rem;" data-i18n="up1_title">🧼 Food Safety & Hygiene</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="up1_desc">Master professional kitchen sanitation, allergen communication, and international food handling vocabulary in English.</p>
+                            </div>
+                            <div class="upcoming-card">
+                                <span style="font-size: 0.74rem; font-weight: 800; color: var(--mexico-green-bright); letter-spacing: 0.08em;">COMING SOON · MODULE 06</span>
+                                <h4 style="font-size: 1.25rem;" data-i18n="up2_title">🥗 Healthy Cooking & Nutrition</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="up2_desc">Learn to discuss macronutrients, balanced meal prep, superfoods, and wellness dining habits fluently.</p>
+                            </div>
+                            <div class="upcoming-card">
+                                <span style="font-size: 0.74rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em;">COMING SOON · MODULE 07</span>
+                                <h4 style="font-size: 1.25rem;" data-i18n="up3_title">⏱️ Smart Kitchen Habits & Mise en Place</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="up3_desc">Build sustainable zero-waste routines, kitchen organization skills, and time-management expressions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 2: UNIFIED LEARNING JOURNEY & MODULES PAGE
+             ================================================================== -->
+        <section id="page-journey" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">🧭 <span data-i18n="journey_eyebrow">CEFR ROADMAP & CURRICULUM</span></div>
+                    <h2 class="section-title" data-i18n="journey_title">Your Culinary English Journey</h2>
+                    <p class="section-subtitle" data-i18n="journey_sub">Click any CEFR milestone from A1 to B2 to inspect objectives, skills, and explore our 4 destination modules.</p>
+                </div>
+
+                <!-- Interactive Timeline Nodes -->
+                <div class="timeline-track">
+                    <button class="level-node active" id="node-A1" onclick="selectJourneyLevel('A1')">
+                        <span class="level-pill" style="background: rgba(16,185,129,0.22); color: #6EE7B7;">A1 · DISCOVER</span>
+                        <h3 style="font-size: 1.65rem; margin-bottom: 0.3rem;">🇲🇽 Mexico</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="node_a1_sub">Foundations & Flavors</p>
+                    </button>
+
+                    <button class="level-node" id="node-A2" onclick="selectJourneyLevel('A2')">
+                        <span class="level-pill" style="background: rgba(252,209,22,0.22); color: var(--colombia-yellow);">A2 · PREPARE</span>
+                        <h3 style="font-size: 1.65rem; margin-bottom: 0.3rem;">🇨🇴 Colombia</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="node_a2_sub">Process & Storytelling</p>
+                    </button>
+
+                    <button class="level-node" id="node-B1" onclick="selectJourneyLevel('B1')">
+                        <span class="level-pill" style="background: rgba(251,113,133,0.22); color: #FDA4AF;">B1 · EXPLORE</span>
+                        <h3 style="font-size: 1.65rem; margin-bottom: 0.3rem;">🇯🇵 Japan</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="node_b1_sub">Tradition & Comparison</p>
+                    </button>
+
+                    <button class="level-node" id="node-B2" onclick="selectJourneyLevel('B2')">
+                        <span class="level-pill" style="background: rgba(96,165,250,0.22); color: #93C5FD;">B2 · SHARE</span>
+                        <h3 style="font-size: 1.65rem; margin-bottom: 0.3rem;">🇫🇷 France</h3>
+                        <p style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="node_b2_sub">Debate & Gastronomy</p>
+                    </button>
+                </div>
+
+                <!-- Dynamic Level Inspector -->
+                <div class="journey-detail-panel" id="journeyDetailPanel"></div>
+
+                <!-- 4 Destination Modules Grid -->
+                <div style="margin-top: 2rem;">
+                    <div class="section-header" style="padding-top: 1rem; margin-bottom: 2.5rem;">
+                        <div class="eyebrow">📚 <span data-i18n="mod_eyebrow">4 SIGNATURE DESTINATION MODULES</span></div>
+                        <h2 class="section-title" data-i18n="mod_title">Master English Through World Cuisine</h2>
+                    </div>
+
+                    <div class="modules-grid">
+                        <!-- Module 1: Mexico -->
+                        <article class="module-card">
+                            <div class="module-hero-img">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=80" alt="Authentic Mexican Tacos">
+                                <span class="module-level-tag" style="background: rgba(0, 122, 83, 0.92); color: #FFF;">🇲🇽 MEXICO · A1 DISCOVER</span>
+                            </div>
+                            <div class="module-body">
+                                <div>
+                                    <h3 style="font-size: 1.8rem; margin-bottom: 0.6rem;" data-i18n="m1_title">Module 1: Colors & Flavors of Mexico</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;" data-i18n="m1_sum">
+                                        Step into vibrant Oaxaca markets. Learn foundational English vocabulary for ingredients, spices, quantities, and restaurant conversations.
+                                    </p>
+                                    <strong style="font-size: 0.82rem; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em;" data-i18n="lbl_outcomes">Learning Outcomes:</strong>
+                                    <ul class="detail-list">
+                                        <li><span class="check">✓</span> <span data-i18n="m1_o1">Describe textures, aromas, and spice levels accurately.</span></li>
+                                        <li><span class="check">✓</span> <span data-i18n="m1_o2">Order confidently and ask about traditional ingredients.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="module-project-box">
+                                    <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;" data-i18n="lbl_final_proj">FINAL PROJECT</div>
+                                    <div style="font-weight: 700; margin-top: 0.2rem;" data-i18n="m1_proj">Create and present an original bilingual Mexican menu.</div>
+                                    <button class="btn-secondary" style="margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="openTrialFor('mx')" data-i18n="btn_try_mod">
+                                        Try Module 1 Free →
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Module 2: Colombia -->
+                        <article class="module-card">
+                            <div class="module-hero-img">
+                                <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=1000&q=80" alt="Colombian Arepas and Coffee">
+                                <span class="module-level-tag" style="background: rgba(252, 209, 22, 0.95); color: #132238;">🇨🇴 COLOMBIA · A2 PREPARE</span>
+                            </div>
+                            <div class="module-body">
+                                <div>
+                                    <h3 style="font-size: 1.8rem; margin-bottom: 0.6rem;" data-i18n="m2_title">Module 2: Hearth & Heritage of Colombia</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;" data-i18n="m2_sum">
+                                        From Antioquia’s mountains to the Caribbean coast, master action verbs, sequencing words, and kitchen measurements.
+                                    </p>
+                                    <strong style="font-size: 0.82rem; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em;" data-i18n="lbl_outcomes">Learning Outcomes:</strong>
+                                    <ul class="detail-list">
+                                        <li><span class="check">✓</span> <span data-i18n="m2_o1">Use imperative verbs and sequence connectors (First, Next, Finally).</span></li>
+                                        <li><span class="check">✓</span> <span data-i18n="m2_o2">Narrate family food memories in clear past simple sentences.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="module-project-box">
+                                    <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;" data-i18n="lbl_final_proj">FINAL PROJECT</div>
+                                    <div style="font-weight: 700; margin-top: 0.2rem;" data-i18n="m2_proj">Record or write a step-by-step Colombian arepa tutorial.</div>
+                                    <button class="btn-secondary" style="margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="openTrialFor('co')" data-i18n="btn_try_mod">
+                                        Try Module 2 Free →
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Module 3: Japan -->
+                        <article class="module-card">
+                            <div class="module-hero-img">
+                                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1000&q=80" alt="Japanese Ramen Culinary Art">
+                                <span class="module-level-tag" style="background: rgba(200, 16, 46, 0.92); color: #FFF;">🇯🇵 JAPAN · B1 EXPLORE</span>
+                            </div>
+                            <div class="module-body">
+                                <div>
+                                    <h3 style="font-size: 1.8rem; margin-bottom: 0.6rem;" data-i18n="m3_title">Module 3: Precision & Ritual in Japan</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;" data-i18n="m3_sum">
+                                        Discover Washoku philosophy, seasonal etiquette, and umami craftsmanship while building intermediate fluency.
+                                    </p>
+                                    <strong style="font-size: 0.82rem; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em;" data-i18n="lbl_outcomes">Learning Outcomes:</strong>
+                                    <ul class="detail-list">
+                                        <li><span class="check">✓</span> <span data-i18n="m3_o1">Compare dining etiquette and traditions across cultures.</span></li>
+                                        <li><span class="check">✓</span> <span data-i18n="m3_o2">Express opinions, preferences, and cultural respect fluently.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="module-project-box">
+                                    <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;" data-i18n="lbl_final_proj">FINAL PROJECT</div>
+                                    <div style="font-weight: 700; margin-top: 0.2rem;" data-i18n="m3_proj">Deliver a comparative presentation on Japanese vs. local food cultures.</div>
+                                    <button class="btn-secondary" style="margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="openTrialFor('jp')" data-i18n="btn_try_mod">
+                                        Try Module 3 Free →
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Module 4: France -->
+                        <article class="module-card">
+                            <div class="module-hero-img">
+                                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=80" alt="French Artisanal Pastry">
+                                <span class="module-level-tag" style="background: rgba(0, 102, 204, 0.92); color: #FFF;">🇫🇷 FRANCE · B2 SHARE</span>
+                            </div>
+                            <div class="module-body">
+                                <div>
+                                    <h3 style="font-size: 1.8rem; margin-bottom: 0.6rem;" data-i18n="m4_title">Module 4: Terroir & Discourse in France</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.2rem;" data-i18n="m4_sum">
+                                        Enter Parisian bistros and Lyon’s gastronomic halls. Master nuanced critique, persuasive speaking, and cultural debate.
+                                    </p>
+                                    <strong style="font-size: 0.82rem; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em;" data-i18n="lbl_outcomes">Learning Outcomes:</strong>
+                                    <ul class="detail-list">
+                                        <li><span class="check">✓</span> <span data-i18n="m4_o1">Articulate sophisticated culinary critiques and abstract ideas.</span></li>
+                                        <li><span class="check">✓</span> <span data-i18n="m4_o2">Defend viewpoints on sustainability, terroir, and heritage.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="module-project-box">
+                                    <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;" data-i18n="lbl_final_proj">FINAL PROJECT</div>
+                                    <div style="font-weight: 700; margin-top: 0.2rem;" data-i18n="m4_proj">Participate in a B2 roundtable defending cultural food viewpoints.</div>
+                                    <button class="btn-secondary" style="margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="openTrialFor('fr')" data-i18n="btn_try_mod">
+                                        Try Module 4 Free →
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 3: FREE INTERACTIVE MODULE TRIALS (5-STAGE PROGRESSIVE STEPPER)
+             ================================================================== -->
+        <section id="page-trials" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">✨ <span data-i18n="trial_eyebrow">FREE INTERACTIVE ACADEMY EXPERIENCE</span></div>
+                    <h2 class="section-title" data-i18n="trial_title">Test Drive Any Module — Stage by Stage</h2>
+                    <p class="section-subtitle" data-i18n="trial_sub">
+                        Complete each stage step-by-step (Discover → Word Bank → Watch & Answer → Cooking English → Final Challenge) to unlock your destination badge.
+                    </p>
+                </div>
+
+                <!-- 4 Destination Trial Tabs -->
+                <div class="trial-selector-tabs">
+                    <button class="trial-tab-btn" id="tab-trial-mx" onclick="loadTrialModule('mx')">
+                        <span style="font-size: 1.8rem;">🇲🇽</span>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--mexico-green-bright); font-weight: 800;">MODULE 1 · A1</div>
+                            <div style="font-weight: 700;" id="tab-title-mx">Mexico Trial</div>
+                        </div>
+                    </button>
+
+                    <button class="trial-tab-btn active" id="tab-trial-co" onclick="loadTrialModule('co')">
+                        <span style="font-size: 1.8rem;">🇨🇴</span>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--colombia-yellow); font-weight: 800;">MODULE 2 · A2</div>
+                            <div style="font-weight: 700;" id="tab-title-co">Colombia Trial</div>
+                        </div>
+                    </button>
+
+                    <button class="trial-tab-btn" id="tab-trial-jp" onclick="loadTrialModule('jp')">
+                        <span style="font-size: 1.8rem;">🇯🇵</span>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--japan-red-bright); font-weight: 800;">MODULE 3 · B1</div>
+                            <div style="font-weight: 700;" id="tab-title-jp">Japan Trial</div>
+                        </div>
+                    </button>
+
+                    <button class="trial-tab-btn" id="tab-trial-fr" onclick="loadTrialModule('fr')">
+                        <span style="font-size: 1.8rem;">🇫🇷</span>
+                        <div>
+                            <div style="font-size: 0.75rem; color: var(--france-blue-bright); font-weight: 800;">MODULE 4 · B2</div>
+                            <div style="font-weight: 700;" id="tab-title-fr">France Trial</div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Interactive 5-Stage Workspace -->
+                <div class="trial-workspace" id="trialWorkspace"></div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 4: MEET THE TEAM (EQUAL-HEIGHT CARDS WITH MENTOR PORTRAITS)
+             ================================================================== -->
+        <section id="page-team" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">👨‍🏫 <span data-i18n="team_eyebrow">WORLD-CLASS CULINARY EDUCATORS</span></div>
+                    <h2 class="section-title" data-i18n="team_title">Meet Your Mentors</h2>
+                    <p class="section-subtitle" data-i18n="team_sub">Linguists, cultural storytellers, and culinary specialists guiding your journey across four continents.</p>
+                </div>
+
+                <div class="team-grid">
+                    <!-- 1. Santiago: Mexico -->
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="santiago.jpeg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Santiago - Mexico Culinary Mentor">
+                            <div class="team-food-badge" style="border-color: var(--mexico-green-bright);" title="Mexico · Tacos">🌮</div>
+                        </div>
+                        <div class="team-info">
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--mexico-green-bright); letter-spacing: 0.08em;">🇲🇽 MEXICO · MODULE 1 (A1)</div>
+                                <h3 style="font-size: 1.55rem; margin-top: 0.2rem;">Santiago</h3>
+                                <div style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.85rem;" data-i18n="t1_role">Mexican Gastronomy & A1 Foundations Mentor</div>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.7rem;">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_spec">Specialization:</strong> <span data-i18n="t1_spec">Sensory vocabulary, Oaxaca market immersion & beginner speaking confidence.</span>
+                                </p>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_phil">Philosophy:</strong> <span data-i18n="t1_phil">“When you describe real flavors you love, English stops being a textbook and becomes alive.”</span>
+                                </p>
+                            </div>
+                            <div class="fun-fact-pill">
+                                🌮 <strong data-i18n="lbl_fact">Fun Fact:</strong> <span data-i18n="t1_fact">Collects heirloom corn varieties and teaches students how to make handmade tortillas from scratch.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Maira: Colombia -->
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="maira.jpeg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Maira - Colombia Culinary Mentor">
+                            <div class="team-food-badge" style="border-color: var(--colombia-yellow);" title="Colombia · Arepas">🫓</div>
+                        </div>
+                        <div class="team-info">
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;">🇨🇴 COLOMBIA · MODULE 2 (A2)</div>
+                                <h3 style="font-size: 1.55rem; margin-top: 0.2rem;">Maira</h3>
+                                <div style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.85rem;" data-i18n="t2_role">Colombian Culinary Heritage & A2 Fluency Mentor</div>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.7rem;">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_spec">Specialization:</strong> <span data-i18n="t2_spec">Action verbs, step-by-step recipe storytelling & regional Colombian cuisine.</span>
+                                </p>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_phil">Philosophy:</strong> <span data-i18n="t2_phil">“Every family recipe carries a story—guiding students to share theirs builds lasting fluency.”</span>
+                                </p>
+                            </div>
+                            <div class="fun-fact-pill">
+                                ☕ <strong data-i18n="lbl_fact">Fun Fact:</strong> <span data-i18n="t2_fact">Has tasted over 25 regional styles of Colombian arepas from Antioquia to the Caribbean coast.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Sharon: Japan -->
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="sharon.jpeg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Sharon - Japan Culinary Mentor">
+                            <div class="team-food-badge" style="border-color: var(--japan-red-bright);" title="Japan · Sushi & Washoku">🍣</div>
+                        </div>
+                        <div class="team-info">
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--japan-red-bright); letter-spacing: 0.08em;">🇯🇵 JAPAN · MODULE 3 (B1)</div>
+                                <h3 style="font-size: 1.55rem; margin-top: 0.2rem;">Sharon</h3>
+                                <div style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.85rem;" data-i18n="t3_role">Washoku Culture & B1 Intercultural Mentor</div>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.7rem;">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_spec">Specialization:</strong> <span data-i18n="t3_spec">Cross-cultural comparisons, dining etiquette & intermediate conversational flow.</span>
+                                </p>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_phil">Philosophy:</strong> <span data-i18n="t3_phil">“Mindful observation in the kitchen sharpens precision and empathy in a second language.”</span>
+                                </p>
+                            </div>
+                            <div class="fun-fact-pill">
+                                🍵 <strong data-i18n="lbl_fact">Fun Fact:</strong> <span data-i18n="t3_fact">Practices traditional matcha whisking before every live B1 cultural seminar.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Juan David: France -->
+                    <div class="team-card">
+                        <div class="team-photo-wrapper">
+                            <img src="juandavid.jpeg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Juan David - France Culinary Mentor">
+                            <div class="team-food-badge" style="border-color: var(--france-blue-bright);" title="France · Boulangerie">🥐</div>
+                        </div>
+                        <div class="team-info">
+                            <div>
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--france-blue-bright); letter-spacing: 0.08em;">🇫🇷 FRANCE · MODULE 4 (B2)</div>
+                                <h3 style="font-size: 1.55rem; margin-top: 0.2rem;">Juan David</h3>
+                                <div style="color: var(--warm-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.85rem;" data-i18n="t4_role">French Gastronomy & B2 Rhetoric Mentor</div>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.7rem;">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_spec">Specialization:</strong> <span data-i18n="t4_spec">Persuasive argumentation, sensory critique & upper-intermediate debate fluency.</span>
+                                </p>
+                                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                                    <strong style="color: var(--text-primary);" data-i18n="lbl_phil">Philosophy:</strong> <span data-i18n="t4_phil">“True B2 mastery means defending your cultural perspective with nuance, grace, and confidence.”</span>
+                                </p>
+                            </div>
+                            <div class="fun-fact-pill">
+                                🥐 <strong data-i18n="lbl_fact">Fun Fact:</strong> <span data-i18n="t4_fact">Bakes 36-hour laminated sourdough croissants while hosting weekend English debate clubs.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 5: PRICING & ENROLLMENT + COMPANION RECIPE BOOK ADD-ON
+             ================================================================== -->
+        <section id="page-pricing" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">🎟️ <span data-i18n="price_eyebrow">TUITION & PASSPORT OPTIONS</span></div>
+                    <h2 class="section-title" data-i18n="price_title">Invest in Your Global Fluency</h2>
+                    <p class="section-subtitle" data-i18n="price_sub">Choose the complete 4-country culinary passport or begin with a single destination module.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Option 1: Complete Culinary Journey -->
+                    <div class="price-card featured">
+                        <span class="best-value-badge" data-i18n="best_value">★ BEST VALUE · SAVE 35%</span>
+                        <div>
+                            <div style="color: var(--warm-gold); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em;" data-i18n="opt1_tag">OPTION 1 · FULL ACADEMY PASSPORT</div>
+                            <h3 style="font-size: 2.2rem; margin: 0.4rem 0;" data-i18n="opt1_title">Complete Culinary Journey</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="opt1_desc">Full A1 → B2 progression across Mexico, Colombia, Japan, and France.</p>
+                            <div style="margin: 1.75rem 0; display: flex; align-items: baseline; gap: 0.6rem;">
+                                <span style="font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; font-weight: 700; color: var(--colombia-yellow);">$249</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="one_time">USD · One-time payment</span>
+                            </div>
+                            <ul class="detail-list" style="margin-bottom: 2rem;">
+                                <li><span class="check">✓</span> <span data-i18n="opt1_f1">All 4 Modules (A1 Mexico, A2 Colombia, B1 Japan, B2 France)</span></li>
+                                <li><span class="check">✓</span> <span data-i18n="opt1_f2">Official Verified CEFR Culinary English Certificate</span></li>
+                                <li><span class="check">✓</span> <span data-i18n="opt1_f3">Lifetime access to 4K culinary episodes & interactive word banks</span></li>
+                                <li><span class="check">✓</span> <span data-i18n="opt1_f4">4 Final Project evaluations with personalized instructor feedback</span></li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="triggerEnrollment('Complete Culinary Journey ($249)')" data-i18n="enroll_full">
+                            Enroll in Complete Journey →
+                        </button>
+                    </div>
+
+                    <!-- Option 2: Single Module -->
+                    <div class="price-card">
+                        <div>
+                            <div style="color: var(--warm-gold); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em;" data-i18n="opt2_tag">OPTION 2 · FLEXIBLE ENTRY</div>
+                            <h3 style="font-size: 2.2rem; margin: 0.4rem 0;" data-i18n="opt2_title">Single Module</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="opt2_desc">Choose your destination and focus on one targeted CEFR level.</p>
+                            <div style="margin: 1.75rem 0; display: flex; align-items: baseline; gap: 0.6rem;">
+                                <span style="font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; font-weight: 700; color: var(--text-primary);">$79</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="per_mod">USD · Per destination module</span>
+                            </div>
+
+                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--warm-gold); text-transform: uppercase;" data-i18n="choose_dest">Select Your Destination:</div>
+                            <div class="single-module-selector">
+                                <button class="dest-choice selected" onclick="selectSingleDest(this, '🇲🇽 Mexico (A1 Discover)')">
+                                    <strong>🇲🇽 Mexico</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Level A1 · Discover</span>
+                                </button>
+                                <button class="dest-choice" onclick="selectSingleDest(this, '🇨🇴 Colombia (A2 Prepare)')">
+                                    <strong>🇨🇴 Colombia</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Level A2 · Prepare</span>
+                                </button>
+                                <button class="dest-choice" onclick="selectSingleDest(this, '🇯🇵 Japan (B1 Explore)')">
+                                    <strong>🇯🇵 Japan</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Level B1 · Explore</span>
+                                </button>
+                                <button class="dest-choice" onclick="selectSingleDest(this, '🇫🇷 France (B2 Share)')">
+                                    <strong>🇫🇷 France</strong><br><span style="font-size: 0.8rem; color: var(--text-muted);">Level B2 · Share</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" style="width: 100%; justify-content: center; border-color: var(--warm-gold);" onclick="enrollSelectedSingle()" data-i18n="enroll_single">
+                            Enroll in Selected Destination
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional Product: Culinary Recipe & Course Tracker Book -->
+                <div class="addon-box">
+                    <div style="max-width: 720px;">
+                        <div style="font-size: 0.76rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.12em;" data-i18n="book_tag">
+                            📖 ADDITIONAL COMPANION PRODUCT
+                        </div>
+                        <h3 style="font-size: 1.55rem; margin: 0.35rem 0;" data-i18n="book_title">
+                            World Bites: The Official Bilingual Recipe & Course Tracker Book ($39 USD)
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="book_desc">
+                            Includes 40+ illustrated recipes from Mexico, Colombia, Japan & France, bilingual culinary glossaries, reflection prompts, and physical habit/progress trackers for every module.
+                        </p>
+                    </div>
+                    <button class="btn-primary" onclick="triggerEnrollment('World Bites Recipe & Course Tracker Book ($39)')" data-i18n="book_btn">
+                        Add Companion Book →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 6: FAQ (INTERACTIVE ACCORDION)
+             ================================================================== -->
+        <section id="page-faq" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">❓ <span data-i18n="faq_eyebrow">ACADEMY KNOWLEDGE BASE</span></div>
+                    <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle" data-i18n="faq_sub">Everything you need to know about CEFR progression, certification, and your culinary learning experience.</p>
+                </div>
+
+                <div class="faq-list" id="faqList"></div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             PAGE 7: CONTACT PAGE
+             ================================================================== -->
+        <section id="page-contact" class="page-view">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">✉️ <span data-i18n="contact_eyebrow">ADMISSIONS & CONCIERGE</span></div>
+                    <h2 class="section-title" data-i18n="contact_title">Start Your Conversation</h2>
+                    <p class="section-subtitle" data-i18n="contact_sub">Have questions about placement, corporate culinary cohorts, or enrollment? Our academic team replies within 24 hours.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <form class="form-card" onsubmit="handleContactSubmit(event)">
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1.25rem;" data-i18n="form_heading">Send Us a Message</h3>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="lbl_name">Full Name</label>
+                            <input type="text" class="form-control" required placeholder="Camila Restrepo">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="lbl_email">Email Address</label>
+                            <input type="email" class="form-control" required placeholder="camila@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="lbl_interest">Destination of Interest</label>
+                            <select class="form-control" id="contactInterest">
+                                <option value="Complete Culinary Journey (A1-B2)">Complete Culinary Journey (A1 → B2)</option>
+                                <option value="Module 1: Mexico (A1)">Module 1: Mexico (A1 Discover)</option>
+                                <option value="Module 2: Colombia (A2)">Module 2: Colombia (A2 Prepare)</option>
+                                <option value="Module 3: Japan (B1)">Module 3: Japan (B1 Explore)</option>
+                                <option value="Module 4: France (B2)">Module 4: France (B2 Share)</option>
+                                <option value="Companion Recipe & Progress Book">Companion Recipe & Progress Book ($39)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="lbl_msg">Your Message</label>
+                            <textarea class="form-control" rows="4" required placeholder="Tell us about your current English level and culinary goals..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;" data-i18n="btn_send">
+                            Send Inquiry & Request Syllabus
+                        </button>
+                    </form>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="form-card">
+                            <div style="color: var(--warm-gold); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.12em;" data-i18n="loc_tag">GLOBAL HEADQUARTERS</div>
+                            <h3 style="font-size: 1.6rem; margin: 0.4rem 0 0.8rem;">Bogotá · Tokyo · Paris · Oaxaca</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.94rem; margin-bottom: 1.2rem;" data-i18n="loc_desc">
+                                Culinary Studios & Digital Campus: Zona G Gastronomic District, Bogotá, Colombia — streaming globally to 45+ countries.
+                            </p>
+                            <div style="display: grid; gap: 0.65rem; font-size: 0.92rem;">
+                                <div>📧 <strong>Email:</strong> admissions@worldbitesacademy.com</div>
+                                <div>🌐 <strong>Social:</strong> @WorldBitesAcademy · Instagram · YouTube · LinkedIn</div>
+                            </div>
+                        </div>
+
+                        <div class="form-card" style="background: linear-gradient(135deg, rgba(226,177,101,0.22), rgba(19,34,56,0.96)); border-color: var(--warm-gold);">
+                            <h3 style="font-size: 1.55rem; margin-bottom: 0.5rem;" data-i18n="ready_title">Ready to Begin Today?</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;" data-i18n="ready_desc">
+                                Instant access to all video episodes, interactive recipe workbooks, and live mentor feedback.
+                            </p>
+                            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="navigateTo('pricing')" data-i18n="ready_btn">
+                                Enroll Now →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Feedback -->
+    <div class="toast" id="toastBox">
+        <span style="font-size: 1.3rem;">✨</span>
+        <span id="toastMessage" style="font-size: 0.9rem; font-weight: 600;">Notification</span>
+    </div>
+
+    <footer>
+        <div style="font-weight: 800; letter-spacing: 0.15em; color: var(--warm-gold); margin-bottom: 0.4rem;">WORLD BITES · CULINARY ENGLISH COURSE</div>
+        <p data-i18n="footer_copy">Mastering English One Recipe at a Time · © 2026 World Bites International. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ======================================================================
+         EMBEDDED JAVASCRIPT: MULTILINGUAL ENGINE, SOUND FX, ROUTER & INTERACTIONS
+         ====================================================================== -->
+    <script>
+        /* ----------------------------------------------------------------------
+           0. SOPHISTICATED ACOUSTIC / CRYSTAL CHIME (MAIN NAV ITEMS ONLY)
+           ---------------------------------------------------------------------- */
+        let audioCtx = null;
+        function playButtonSound() {
+            try {
+                if (!audioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioCtx = new AudioContext();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const now = audioCtx.currentTime;
+
+                // Warm wooden marimba / crystal glass resonance (sophisticated MasterClass tone)
+                const fundamental = audioCtx.createOscillator();
+                const overtone = audioCtx.createOscillator();
+                const filter = audioCtx.createBiquadFilter();
+                const gain = audioCtx.createGain();
+
+                fundamental.type = 'sine';
+                fundamental.frequency.setValueAtTime(330, now); // Warm E4
+                fundamental.frequency.exponentialRampToValueAtTime(328, now + 0.16);
+
+                overtone.type = 'sine';
+                overtone.frequency.setValueAtTime(660, now); // Subtle octave harmonic
+
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(1100, now);
+
+                gain.gain.setValueAtTime(0.001, now);
+                gain.gain.linearRampToValueAtTime(0.22, now + 0.012);
+                gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.18);
+
+                fundamental.connect(filter);
+                overtone.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                fundamental.start(now);
+                overtone.start(now);
+                fundamental.stop(now + 0.19);
+                overtone.stop(now + 0.19);
+            } catch (e) {
+                // Gracefully ignore if browser blocks audio
+            }
+        }
+
+        function playErrorSound() {
+            try {
+                if (!audioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioCtx = new AudioContext();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const now = audioCtx.currentTime;
+
+                const osc = audioCtx.createOscillator();
+                const filter = audioCtx.createBiquadFilter();
+                const gain = audioCtx.createGain();
+
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(195, now);
+                osc.frequency.exponentialRampToValueAtTime(145, now + 0.22);
+
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(520, now);
+
+                gain.gain.setValueAtTime(0.001, now);
+                gain.gain.linearRampToValueAtTime(0.18, now + 0.015);
+                gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.24);
+
+                osc.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.25);
+            } catch (e) {
+                // Gracefully ignore if browser blocks audio
+            }
+        }
+
+        const navSoundPages = new Set(['home', 'journey', 'team', 'pricing', 'faq', 'contact']);
+        document.addEventListener('click', (e) => {
+            const navBtn = e.target.closest('.nav-item');
+            if (navBtn && navSoundPages.has(navBtn.dataset.page)) {
+                playButtonSound();
+            }
+        });
+
+        /* ----------------------------------------------------------------------
+           1. GLOBAL STATE & BILINGUAL TRANSLATION DICTIONARY (EN / ES)
+           ---------------------------------------------------------------------- */
+        let currentLang = 'en';
+        let currentPage = 'home';
+        let currentJourneyLevel = 'A1';
+        let currentTrialKey = 'co';
+        let currentTrialStage = 0;
+        let currentStoryIndex = 0;
+        let selectedSingleDestination = '🇲🇽 Mexico (A1 Discover)';
+
+        const i18n = {
+            en: {
+                tagline: "Mastering English One Recipe at a Time",
+                nav_home: "Home",
+                nav_journey: "Journey & Modules",
+                nav_trials: "✨ Free Module Trials",
+                nav_team: "Meet the Team",
+                nav_pricing: "Pricing & Enrollment",
+                nav_faq: "FAQ",
+                nav_contact: "Contact",
+                hero_eyebrow: "CULINARY ENGLISH COURSE · A1 TO B2",
+                hero_title_1: "Travel the World.",
+                hero_title_2: "Learn English.",
+                hero_sub: "Discover English through international gastronomy and cultural experiences. Cook authentic dishes, master real-world fluency, and earn global CEFR credentials.",
+                cta_start: "Start Your Journey →",
+                cta_explore: "Explore the Curriculum",
+                stat_countries: "Culinary Destinations",
+                stat_cefr: "CEFR Progression",
+                stat_fluency: "Speaking Confidence",
+                card_preview_title: "The Art of the Colombian Arepa",
+                card_preview_desc: "Experience how sensory cooking verbs, cultural storytelling, and live challenges replace boring grammar drills.",
+                card_preview_btn: "Try Free Module Lessons Now",
+                map_eyebrow: "INTERACTIVE GASTRONOMIC ATLAS",
+                map_title: "Hover or Click a Destination",
+                map_sub: "Explore how each country unlocks a new CEFR proficiency milestone through its signature cuisine.",
+                lbl_theme: "Theme:",
+                insp_cta: "Launch Free Trial →",
+                bridge1_title: "Journey & Modules",
+                bridge1_desc: "Explore the complete A1 → B2 roadmap and all 4 culinary destination projects.",
+                bridge2_title: "5-Stage Free Trials",
+                bridge2_desc: "Experience interactive lessons step-by-step and unlock country achievement badges.",
+                bridge3_title: "Culinary Mentors",
+                bridge3_desc: "Meet Santiago, Maira, Sharon, and Juan David—your cultural and linguistic guides.",
+                bridge4_title: "Plans & Companion Book",
+                bridge4_desc: "Enroll in the complete 4-module passport or choose a single destination + recipe book.",
+                bridge_cta: "Explore →",
+                journey_eyebrow: "CEFR ROADMAP & CURRICULUM",
+                journey_title: "Your Culinary English Journey",
+                journey_sub: "Click any CEFR milestone from A1 to B2 to inspect objectives, skills, and explore our 4 destination modules.",
+                node_a1_sub: "Foundations & Flavors",
+                node_a2_sub: "Process & Storytelling",
+                node_b1_sub: "Tradition & Comparison",
+                node_b2_sub: "Debate & Gastronomy",
+                mod_eyebrow: "4 SIGNATURE DESTINATION MODULES",
+                mod_title: "Master English Through World Cuisine",
+                lbl_outcomes: "Learning Outcomes:",
+                lbl_final_proj: "FINAL PROJECT",
+                btn_try_mod: "Try Module Free →",
+                m1_title: "Module 1: Colors & Flavors of Mexico",
+                m1_sum: "Step into vibrant Oaxaca markets. Learn foundational English vocabulary for ingredients, spices, quantities, and restaurant conversations.",
+                m1_o1: "Describe textures, aromas, and spice levels accurately.",
+                m1_o2: "Order confidently and ask about traditional ingredients.",
+                m1_proj: "Create and present an original bilingual Mexican menu.",
+                m2_title: "Module 2: Hearth & Heritage of Colombia",
+                m2_sum: "From Antioquia’s mountains to the Caribbean coast, master action verbs, sequencing words, and kitchen measurements.",
+                m2_o1: "Use imperative verbs and sequence connectors (First, Next, Finally).",
+                m2_o2: "Narrate family food memories in clear past simple sentences.",
+                m2_proj: "Record or write a step-by-step Colombian arepa tutorial.",
+                m3_title: "Module 3: Precision & Ritual in Japan",
+                m3_sum: "Discover Washoku philosophy, seasonal etiquette, and umami craftsmanship while building intermediate fluency.",
+                m3_o1: "Compare dining etiquette and traditions across cultures.",
+                m3_o2: "Express opinions, preferences, and cultural respect fluently.",
+                m3_proj: "Deliver a comparative presentation on Japanese vs. local food cultures.",
+                m4_title: "Module 4: Terroir & Discourse in France",
+                m4_sum: "Enter Parisian bistros and Lyon’s gastronomic halls. Master nuanced critique, persuasive speaking, and cultural debate.",
+                m4_o1: "Articulate sophisticated culinary critiques and abstract ideas.",
+                m4_o2: "Defend viewpoints on sustainability, terroir, and heritage.",
+                m4_proj: "Participate in a B2 roundtable defending cultural food viewpoints.",
+                trial_eyebrow: "FREE INTERACTIVE ACADEMY EXPERIENCE",
+                trial_title: "Test Drive Any Module — Stage by Stage",
+                trial_sub: "Complete each stage step-by-step (Discover → Word Bank → Watch & Answer → Cooking English → Final Challenge) to unlock your destination badge.",
+                team_eyebrow: "WORLD-CLASS CULINARY EDUCATORS",
+                team_title: "Meet Your Mentors",
+                team_sub: "Linguists, cultural storytellers, and culinary specialists guiding your journey across four continents.",
+                lbl_spec: "Specialization:",
+                lbl_phil: "Philosophy:",
+                lbl_fact: "Fun Fact:",
+                t1_role: "Mexican Gastronomy & A1 Foundations Mentor",
+                t1_spec: "Sensory vocabulary, Oaxaca market immersion & beginner speaking confidence.",
+                t1_phil: "“When you describe real flavors you love, English stops being a textbook and becomes alive.”",
+                t1_fact: "Collects heirloom corn varieties and teaches students how to make handmade tortillas from scratch.",
+                t2_role: "Colombian Culinary Heritage & A2 Fluency Mentor",
+                t2_spec: "Action verbs, step-by-step recipe storytelling & regional Colombian cuisine.",
+                t2_phil: "“Every family recipe carries a story—guiding students to share theirs builds lasting fluency.”",
+                t2_fact: "Has tasted over 25 regional styles of Colombian arepas from Antioquia to the Caribbean coast.",
+                t3_role: "Washoku Culture & B1 Intercultural Mentor",
+                t3_spec: "Cross-cultural comparisons, dining etiquette & intermediate conversational flow.",
+                t3_phil: "“Mindful observation in the kitchen sharpens precision and empathy in a second language.”",
+                t3_fact: "Practices traditional matcha whisking before every live B1 cultural seminar.",
+                t4_role: "French Gastronomy & B2 Rhetoric Mentor",
+                t4_spec: "Persuasive argumentation, sensory critique & upper-intermediate debate fluency.",
+                t4_phil: "“True B2 mastery means defending your cultural perspective with nuance, grace, and confidence.”",
+                t4_fact: "Bakes 36-hour laminated sourdough croissants while hosting weekend English debate clubs.",
+                price_eyebrow: "TUITION & PASSPORT OPTIONS",
+                price_title: "Invest in Your Global Fluency",
+                price_sub: "Choose the complete 4-country culinary passport or begin with a single destination module.",
+                best_value: "★ BEST VALUE · SAVE 35%",
+                opt1_tag: "OPTION 1 · FULL COURSE PASSPORT",
+                opt1_title: "Complete Culinary Journey",
+                opt1_desc: "Full A1 → B2 progression across Mexico, Colombia, Japan, and France.",
+                one_time: "USD · One-time payment",
+                opt1_f1: "All 4 Modules (A1 Mexico, A2 Colombia, B1 Japan, B2 France)",
+                opt1_f2: "Official Verified CEFR Culinary English Certificate",
+                opt1_f3: "Lifetime access to 4K culinary episodes & interactive word banks",
+                opt1_f4: "4 Final Project evaluations with personalized instructor feedback",
+                enroll_full: "Enroll in Complete Journey →",
+                opt2_tag: "OPTION 2 · FLEXIBLE ENTRY",
+                opt2_title: "Single Module",
+                opt2_desc: "Choose your destination and focus on one targeted CEFR level.",
+                per_mod: "USD · Per destination module",
+                choose_dest: "Select Your Destination:",
+                enroll_single: "Enroll in Selected Destination",
+                faq_eyebrow: "COURSE KNOWLEDGE BASE",
+                faq_title: "Frequently Asked Questions",
+                faq_sub: "Everything you need to know about CEFR progression, certification, and your culinary learning experience.",
+                stories_eyebrow: "GLOBAL ALUMNI IMPACT",
+                stories_title: "Student Success Stories",
+                stories_sub: "Real learners who transformed their English fluency through international gastronomy.",
+                upcoming_eyebrow: "COMING SOON · EXPANDING COURSE",
+                upcoming_title: "Future Culinary Specializations & Companion Book",
+                upcoming_cta: "Explore Book & Plans →",
+                up1_title: "🧼 Food Safety & Hygiene",
+                up1_desc: "Master professional kitchen sanitation, allergen communication, and international food handling vocabulary in English.",
+                up2_title: "🥗 Healthy Cooking & Nutrition",
+                up2_desc: "Learn to discuss macronutrients, balanced meal prep, superfoods, and wellness dining habits fluently.",
+                up3_title: "⏱️ Smart Kitchen Habits & Mise en Place",
+                up3_desc: "Build sustainable zero-waste routines, kitchen organization skills, and time-management expressions.",
+                book_tag: "📖 ADDITIONAL COMPANION PRODUCT",
+                book_title: "World Bites: The Official Bilingual Recipe & Course Tracker Book ($39 USD)",
+                book_desc: "Includes 40+ illustrated recipes from Mexico, Colombia, Japan & France, bilingual culinary glossaries, reflection prompts, and physical habit/progress trackers for every module.",
+                book_btn: "Add Companion Book →",
+                contact_eyebrow: "ADMISSIONS & CONCIERGE",
+                contact_title: "Start Your Conversation",
+                contact_sub: "Have questions about placement, corporate culinary cohorts, or enrollment? Our academic team replies within 24 hours.",
+                form_heading: "Send Us a Message",
+                lbl_name: "Full Name",
+                lbl_email: "Email Address",
+                lbl_interest: "Destination of Interest",
+                lbl_msg: "Your Message",
+                btn_send: "Send Inquiry & Request Syllabus",
+                loc_tag: "GLOBAL HEADQUARTERS",
+                loc_desc: "Culinary Studios & Digital Campus: Zona G Gastronomic District, Bogotá, Colombia — streaming globally to 45+ countries.",
+                ready_title: "Ready to Begin Today?",
+                ready_desc: "Instant access to all video episodes, interactive recipe workbooks, and live mentor feedback.",
+                ready_btn: "Enroll Now →",
+                footer_copy: "Mastering English One Recipe at a Time · © 2026 World Bites International. All Rights Reserved."
+            },
+            es: {
+                tagline: "Domina el Inglés Una Receta a la Vez",
+                nav_home: "Inicio",
+                nav_journey: "Ruta y Módulos",
+                nav_trials: "✨ Prueba Gratis de Módulos",
+                nav_team: "Nuestro Equipo",
+                nav_pricing: "Precios e Inscripción",
+                nav_faq: "Preguntas Frecuentes",
+                nav_contact: "Contacto",
+                hero_eyebrow: "CURSO DE INGLÉS CULINARIO · A1 A B2",
+                hero_title_1: "Viaja por el Mundo.",
+                hero_title_2: "Aprende Inglés.",
+                hero_sub: "Descubre el inglés a través de la gastronomía internacional y experiencias culturales. Cocina platos auténticos, logra fluidez real y obtén certificación MCER.",
+                cta_start: "Comienza Tu Viaje →",
+                cta_explore: "Explorar el Currículo",
+                stat_countries: "Destinos Culinarios",
+                stat_cefr: "Progresión MCER",
+                stat_fluency: "Confianza al Hablar",
+                card_preview_title: "El Arte de la Arepa Colombiana",
+                card_preview_desc: "Experimenta cómo los verbos sensoriales, las historias culturales y los retos prácticos reemplazan la gramática aburrida.",
+                card_preview_btn: "Probar Lecciones Gratis Ahora",
+                map_eyebrow: "ATLAS GASTRONÓMICO INTERACTIVO",
+                map_title: "Explora Cada Destino en el Mapa",
+                map_sub: "Descubre cómo cada país desbloquea un nuevo nivel MCER a través de su cocina emblemática.",
+                lbl_theme: "Temática:",
+                insp_cta: "Probar Módulo Gratis →",
+                bridge1_title: "Ruta y Módulos",
+                bridge1_desc: "Explora la ruta completa A1 → B2 y los 4 proyectos finales de cada destino.",
+                bridge2_title: "Pruebas Gratis por Etapas",
+                bridge2_desc: "Vive lecciones interactivas paso a paso y desbloquea insignias de cada país.",
+                bridge3_title: "Mentores Culinarios",
+                bridge3_desc: "Conoce a Santiago, Maira, Sharon y Juan David, tus guías culturales y lingüísticos.",
+                bridge4_title: "Planes y Libro Complementario",
+                bridge4_desc: "Inscríbete en el pasaporte completo de 4 módulos o elige un destino + libro de recetas.",
+                bridge_cta: "Explorar →",
+                journey_eyebrow: "RUTA MCER Y CURRÍCULO",
+                journey_title: "Tu Viaje de Inglés Culinario",
+                journey_sub: "Haz clic en cualquier nivel de A1 a B2 para ver objetivos, habilidades y explorar los 4 módulos.",
+                node_a1_sub: "Bases y Sabores",
+                node_a2_sub: "Procesos e Historias",
+                node_b1_sub: "Tradición y Comparación",
+                node_b2_sub: "Debate y Gastronomía",
+                mod_eyebrow: "4 MÓDULOS INSIGNIA POR DESTINO",
+                mod_title: "Domina el Inglés con Cocina Mundial",
+                lbl_outcomes: "Resultados de Aprendizaje:",
+                lbl_final_proj: "PROYECTO FINAL",
+                btn_try_mod: "Probar Módulo Gratis →",
+                m1_title: "Módulo 1: Colores y Sabores de México",
+                m1_sum: "Adéntrate en los mercados de Oaxaca. Aprende vocabulario esencial de ingredientes, especias, cantidades y conversaciones en restaurantes.",
+                m1_o1: "Describe texturas, aromas y niveles de picante con precisión.",
+                m1_o2: "Ordena con seguridad y pregunta por ingredientes tradicionales.",
+                m1_proj: "Crea y presenta un menú mexicano bilingüe original.",
+                m2_title: "Módulo 2: Fogón y Herencia de Colombia",
+                m2_sum: "Desde las montañas de Antioquia hasta el Caribe, domina verbos de acción, conectores de secuencia y medidas culinarias.",
+                m2_o1: "Usa verbos imperativos y conectores (First, Next, Finally).",
+                m2_o2: "Narra recuerdos familiares gastronómicos en pasado simple.",
+                m2_proj: "Graba o escribe un tutorial paso a paso de arepas colombianas.",
+                m3_title: "Módulo 3: Precisión y Ritual en Japón",
+                m3_sum: "Descubre la filosofía Washoku, la etiqueta de temporada y el arte del umami mientras desarrollas fluidez intermedia.",
+                m3_o1: "Compara protocolos en la mesa y tradiciones entre culturas.",
+                m3_o2: "Expresa opiniones, preferencias y respeto cultural con fluidez.",
+                m3_proj: "Presenta una comparación entre la cultura gastronómica japonesa y la tuya.",
+                m4_title: "Módulo 4: Terroir y Discurso en Francia",
+                m4_sum: "Ingresa a bistrós parisinos y salones gastronómicos de Lyon. Domina la crítica matizada, la persuasión y el debate cultural.",
+                m4_o1: "Articula críticas gastronómicas sofisticadas e ideas abstractas.",
+                m4_o2: "Defiende posturas sobre sostenibilidad, terroir y patrimonio.",
+                m4_proj: "Participa en una mesa redonda B2 defendiendo puntos de vista culturales.",
+                trial_eyebrow: "EXPERIENCIA INTERACTIVA GRATUITA",
+                trial_title: "Prueba Cada Módulo — Etapa por Etapa",
+                trial_sub: "Completa cada etapa paso a paso (Descubrir → Vocabulario → Pregunta → Inglés Culinario → Reto Final) para desbloquear tu insignia.",
+                team_eyebrow: "EDUCADORES CULINARIOS DE CLASE MUNDIAL",
+                team_title: "Conoce a Tus Mentores",
+                team_sub: "Lingüistas, narradores culturales y especialistas gastronómicos que guían tu viaje por cuatro continentes.",
+                lbl_spec: "Especialización:",
+                lbl_phil: "Filosofía:",
+                lbl_fact: "Dato Curioso:",
+                t1_role: "Mentor de Gastronomía Mexicana y Bases A1",
+                t1_spec: "Vocabulario sensorial, mercados de Oaxaca y confianza inicial al hablar.",
+                t1_phil: "“Cuando describes sabores reales que amas, el inglés deja de ser un libro y cobra vida.”",
+                t1_fact: "Colecciona variedades de maíz criollo y enseña a preparar tortillas hechas a mano.",
+                t2_role: "Mentora de Herencia Culinaria Colombiana y Fluidez A2",
+                t2_spec: "Verbos de acción, narración de recetas paso a paso y cocina regional colombiana.",
+                t2_phil: "“Cada receta familiar guarda una historia; compartirla en inglés construye fluidez duradera.”",
+                t2_fact: "Ha probado más de 25 estilos regionales de arepas colombianas desde Antioquia hasta el Caribe.",
+                t3_role: "Mentora de Cultura Washoku e Interculturalidad B1",
+                t3_spec: "Comparaciones interculturales, etiqueta gastronómica y fluidez conversacional intermedia.",
+                t3_phil: "“La observación consciente en la cocina agudiza la precisión y empatía en un segundo idioma.”",
+                t3_fact: "Practica la ceremonia tradicional del té matcha antes de cada seminario cultural B1.",
+                t4_role: "Mentor de Gastronomía Francesa y Retórica B2",
+                t4_spec: "Argumentación persuasiva, crítica sensorial y debates de nivel intermedio-alto.",
+                t4_phil: "“El dominio B2 significa defender tu perspectiva cultural con matices, elegancia y seguridad.”",
+                t4_fact: "Hornea croissants de masa madre laminados durante 36 horas mientras modera clubes de debate.",
+                price_eyebrow: "INVERSIÓN Y PASAPORTES",
+                price_title: "Invierte en Tu Fluidez Global",
+                price_sub: "Elige el pasaporte culinario completo de 4 países o comienza con un módulo individual.",
+                best_value: "★ MEJOR VALOR · AHORRA 35%",
+                opt1_tag: "OPCIÓN 1 · PASAPORTE COMPLETO DEL CURSO",
+                opt1_title: "Viaje Culinario Completo",
+                opt1_desc: "Progresión completa A1 → B2 por México, Colombia, Japón y Francia.",
+                one_time: "USD · Pago único",
+                opt1_f1: "Los 4 Módulos (A1 México, A2 Colombia, B1 Japón, B2 Francia)",
+                opt1_f2: "Certificado Oficial Verificado de Inglés Culinario MCER",
+                opt1_f3: "Acceso de por vida a episodios 4K y bancos de vocabulario interactivos",
+                opt1_f4: "4 evaluaciones de Proyecto Final con retroalimentación personalizada",
+                enroll_full: "Inscribirme al Viaje Completo →",
+                opt2_tag: "OPCIÓN 2 · INICIO FLEXIBLE",
+                opt2_title: "Módulo Individual",
+                opt2_desc: "Elige tu destino y enfócate en un nivel MCER específico.",
+                per_mod: "USD · Por módulo de destino",
+                choose_dest: "Selecciona Tu Destino:",
+                enroll_single: "Inscribirme al Destino Elegido",
+                faq_eyebrow: "BASE DE CONOCIMIENTO DEL CURSO",
+                faq_title: "Preguntas Frecuentes",
+                faq_sub: "Todo lo que necesitas saber sobre la progresión MCER, certificación y experiencia de aprendizaje.",
+                stories_eyebrow: "IMPACTO GLOBAL",
+                stories_title: "Historias de Éxito Estudiantil",
+                stories_sub: "Estudiantes reales que transformaron su fluidez en inglés a través de la gastronomía.",
+                upcoming_eyebrow: "PRÓXIMAMENTE · CURSO EN EXPANSIÓN",
+                upcoming_title: "Futuros Módulos Culinarios y Libro de Seguimiento",
+                upcoming_cta: "Ver Libro y Planes →",
+                up1_title: "🧼 Sanidad y Manejo de Alimentos",
+                up1_desc: "Domina el vocabulario internacional de higiene en cocina, manipulación segura de alimentos y alérgenos en inglés.",
+                up2_title: "🥗 Cocina Saludable y Nutrición",
+                up2_desc: "Aprende a conversar con fluidez sobre macronutrientes, preparación saludable y hábitos conscientes.",
+                up3_title: "⏱️ Buenos Hábitos de Cocina y Organización",
+                up3_desc: "Desarrolla rutinas sostenibles sin desperdicio, orden en cocina y expresiones de gestión del tiempo.",
+                book_tag: "📖 PRODUCTO ADICIONAL COMPLEMENTARIO",
+                book_title: "World Bites: Libro Oficial de Recetas y Seguimiento del Curso ($39 USD)",
+                book_desc: "Incluye más de 40 recetas ilustradas de México, Colombia, Japón y Francia, glosarios bilingües y plantillas físicas de seguimiento de progreso por módulo.",
+                book_btn: "Adquirir Libro Complementario →",
+                contact_eyebrow: "ADMISIONES Y CONSERJERÍA",
+                contact_title: "Inicia Tu Conversación",
+                contact_sub: "¿Tienes preguntas sobre ubicación de nivel o inscripción? Nuestro equipo responde en menos de 24 horas.",
+                form_heading: "Envíanos un Mensaje",
+                lbl_name: "Nombre Completo",
+                lbl_email: "Correo Electrónico",
+                lbl_interest: "Destino de Interés",
+                lbl_msg: "Tu Mensaje",
+                btn_send: "Enviar Consulta y Solicitar Programa",
+                loc_tag: "SEDE GLOBAL",
+                loc_desc: "Estudios Culinarios y Campus Digital: Zona G, Bogotá, Colombia — transmitiendo a más de 45 países.",
+                ready_title: "¿Listo para Comenzar Hoy?",
+                ready_desc: "Acceso inmediato a todos los episodios, guías interactivas y retroalimentación de mentores.",
+                ready_btn: "Inscribirme Ahora →",
+                footer_copy: "Domina el Inglés Una Receta a la Vez · © 2026 World Bites International. Todos los derechos reservados."
+            }
+        };
+
+        /* ----------------------------------------------------------------------
+           2. DATA SETS: MAP, JOURNEY, 4 FREE MODULE TRIALS, FAQ, STORIES
+           ---------------------------------------------------------------------- */
+        const mapData = {
+            mx: {
+                flag: "🇲🇽",
+                name: { en: "Mexico", es: "México" },
+                level: { en: "LEVEL A1 · DISCOVER", es: "NIVEL A1 · DESCUBRIR" },
+                badgeStyle: "background: rgba(16, 185, 129, 0.22); color: #6EE7B7; border: 1px solid #10B981;",
+                theme: { en: "Street Gastronomy & Sensory Basics", es: "Gastronomía Callejera y Bases Sensoriales" },
+                goal: {
+                    en: "Master essential food vocabulary, polite ordering, ingredients, and descriptive flavors while designing your own authentic Mexican menu.",
+                    es: "Domina vocabulario esencial de alimentos, pedidos amables, ingredientes y sabores descriptivos diseñando tu propio menú mexicano."
+                }
+            },
+            co: {
+                flag: "🇨🇴",
+                name: { en: "Colombia", es: "Colombia" },
+                level: { en: "LEVEL A2 · PREPARE", es: "NIVEL A2 · PREPARAR" },
+                badgeStyle: "background: rgba(252, 209, 22, 0.22); color: #FCD116; border: 1px solid #FCD116;",
+                theme: { en: "Kitchen Action Verbs & Family Heritage", es: "Verbos de Acción en Cocina y Herencia Familiar" },
+                goal: {
+                    en: "Learn step-by-step recipe instructions, sequencing connectors, and past-tense storytelling by filming your own Colombian arepa tutorial.",
+                    es: "Aprende instrucciones paso a paso, conectores de secuencia e historias en pasado creando tu tutorial de arepa colombiana."
+                }
+            },
+            jp: {
+                flag: "🇯🇵",
+                name: { en: "Japan", es: "Japón" },
+                level: { en: "LEVEL B1 · EXPLORE", es: "NIVEL B1 · EXPLORAR" },
+                badgeStyle: "background: rgba(251, 113, 133, 0.22); color: #FDA4AF; border: 1px solid #FB7185;",
+                theme: { en: "Culinary Etiquette & Cultural Comparison", es: "Etiqueta Culinaria y Comparación Cultural" },
+                goal: {
+                    en: "Analyze Washoku rituals, seasonal ingredients, and umami techniques to compare international food cultures with intermediate fluency.",
+                    es: "Analiza rituales Washoku, ingredientes de temporada y técnicas umami para comparar culturas gastronómicas con fluidez B1."
+                }
+            },
+            fr: {
+                flag: "🇫🇷",
+                name: { en: "France", es: "Francia" },
+                level: { en: "LEVEL B2 · SHARE", es: "NIVEL B2 · COMPARTIR" },
+                badgeStyle: "background: rgba(96, 165, 250, 0.22); color: #93C5FD; border: 1px solid #60A5FA;",
+                theme: { en: "Gastronomic Critique & Cultural Debate", es: "Crítica Gastronómica y Debate Cultural" },
+                goal: {
+                    en: "Debate sustainability, terroir, and culinary identity with persuasive nuance and upper-intermediate B2 rhetorical precision.",
+                    es: "Debate sobre sostenibilidad, terroir e identidad culinaria con matices persuasivos y precisión retórica nivel B2."
+                }
+            }
+        };
+
+        const journeyData = {
+            A1: {
+                badge: "A1 · DISCOVER",
+                country: "🇲🇽 Mexico",
+                img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80",
+                title: { en: "Sensory Discovery in Oaxaca", es: "Descubrimiento Sensorial en Oaxaca" },
+                objectives: {
+                    en: [
+                        "Identify 120+ essential ingredients, spices, and kitchen utensils in English.",
+                        "Form clear present-simple sentences to express likes, allergies, and preferences.",
+                        "Navigate restaurant menus and street-food markets with natural politeness."
+                    ],
+                    es: [
+                        "Identificar más de 120 ingredientes, especias y utensilios esenciales en inglés.",
+                        "Formar oraciones claras en presente simple para expresar gustos y preferencias.",
+                        "Navegar menús de restaurantes y mercados gastronómicos con cortesía natural."
+                    ]
+                },
+                skills: { en: "Listening for key ingredients · Descriptive adjectives · Menu reading", es: "Escucha de ingredientes clave · Adjetivos descriptivos · Lectura de menús" },
+                challenge: { en: "Design & pitch an original 3-course Mexican menu in English.", es: "Diseña y presenta un menú mexicano original de 3 tiempos en inglés." }
+            },
+            A2: {
+                badge: "A2 · PREPARE",
+                country: "🇨🇴 Colombia",
+                img: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=900&q=80",
+                title: { en: "Step-by-Step Preparation in Bogotá & Antioquia", es: "Preparación Paso a Paso en Bogotá y Antioquia" },
+                objectives: {
+                    en: [
+                        "Master 45+ culinary action verbs (knead, simmer, flip, grate, roast).",
+                        "Sequence multi-step instructions using First, Next, Then, and Finally.",
+                        "Share personal childhood food traditions using past-simple storytelling."
+                    ],
+                    es: [
+                        "Dominar más de 45 verbos de acción culinaria (amasar, hervir, voltear, rallar).",
+                        "Secuenciar instrucciones usando First, Next, Then y Finally.",
+                        "Compartir tradiciones gastronómicas familiares usando el pasado simple."
+                    ]
+                },
+                skills: { en: "Imperative instructions · Quantifiers & measurements · Narrative fluency", es: "Instrucciones imperativas · Cuantificadores y medidas · Fluidez narrativa" },
+                challenge: { en: "Produce a step-by-step English video or illustrated Colombian arepa tutorial.", es: "Produce un tutorial ilustrado o en video en inglés sobre cómo preparar arepas." }
+            },
+            B1: {
+                badge: "B1 · EXPLORE",
+                country: "🇯🇵 Japan",
+                img: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80",
+                title: { en: "Cultural Exploration in Kyoto & Tokyo", es: "Exploración Cultural en Kioto y Tokio" },
+                objectives: {
+                    en: [
+                        "Compare and contrast dining customs using comparative and concessive structures.",
+                        "Explain culinary philosophies such as seasonality, balance, and umami.",
+                        "Handle spontaneous travel and dining conversations with connected speech."
+                    ],
+                    es: [
+                        "Comparar y contrastar costumbres gastronómicas usando estructuras comparativas.",
+                        "Explicar filosofías culinarias como estacionalidad, equilibrio y umami.",
+                        "Sostener conversaciones espontáneas de viaje y gastronomía con fluidez."
+                    ]
+                },
+                skills: { en: "Comparative discourse · Cultural analysis · Spontaneous interaction", es: "Discurso comparativo · Análisis cultural · Interacción espontánea" },
+                challenge: { en: "Present a 3-minute comparative analysis of Japanese and Latin American food rituals.", es: "Presenta un análisis comparativo de 3 minutos entre rituales culinarios de Japón y Latinoamérica." }
+            },
+            B2: {
+                badge: "B2 · SHARE",
+                country: "🇫🇷 France",
+                img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80",
+                title: { en: "Articulating Viewpoints in Paris & Lyon", es: "Articulando Posturas en París y Lyon" },
+                objectives: {
+                    en: [
+                        "Defend complex viewpoints on slow food, terroir, and culinary globalization.",
+                        "Use advanced sensory metaphors and persuasive rhetorical connectors.",
+                        "Lead professional discussions and gastronomic critiques with near-native ease."
+                    ],
+                    es: [
+                        "Defender posturas complejas sobre slow food, terroir y globalización culinaria.",
+                        "Usar metáforas sensoriales avanzadas y conectores retóricos persuasivos.",
+                        "Liderar discusiones profesionales y críticas gastronómicas con seguridad."
+                    ]
+                },
+                skills: { en: "Persuasive argumentation · Nuanced critique · Executive speaking", es: "Argumentación persuasiva · Crítica matizada · Expresión ejecutiva" },
+                challenge: { en: "Defend a cultural gastronomy thesis in our live B2 capstone roundtable.", es: "Defiende una tesis de gastronomía cultural en nuestra mesa redonda final B2." }
+            }
+        };
+
+        const trialModulesData = {
+            mx: {
+                shortLabel: { en: "Mexico Trial", es: "Prueba México" },
+                title: "🇲🇽 Module 1: Mexico (A1 Discover)",
+                badgeName: "Oaxaca Flavor Explorer",
+                discover: {
+                    en: "In Oaxaca, cuisine revolves around heirloom corn, smoky chipotle, fresh cilantro, and tangy lime. Notice how English uses sensory adjectives (smoky, tangy, crispy) before nouns.",
+                    es: "En Oaxaca, la cocina gira en torno al maíz criollo, chipotle ahumado, cilantro fresco y lima ácida. Observa cómo el inglés usa adjetivos sensoriales antes del sustantivo."
+                },
+                words: [
+                    { en: "Cilantro", es: "Cilantro fresco" },
+                    { en: "Smoky", es: "Ahumado" },
+                    { en: "Crispy", es: "Crujiente" },
+                    { en: "Lime", es: "Lima / Limón" },
+                    { en: "Salsa Verde", es: "Salsa verde picante" },
+                    { en: "Corn Tortilla", es: "Tortilla de maíz" }
+                ],
+                question: {
+                    en: "How do you politely describe a taco with rich smoke flavor and crunch?",
+                    es: "¿Cómo describes con naturalidad un taco con sabor ahumado y textura crujiente?"
+                },
+                options: [
+                    { text: "It is a smoky, crispy corn tortilla taco.", correct: true },
+                    { text: "It is a taco very smoke and crunching.", correct: false },
+                    { text: "It has crispy of smoke tortilla.", correct: false }
+                ],
+                cookingPhrase: {
+                    phrase: "“Squeeze fresh lime over the tacos and garnish with chopped cilantro.”",
+                    tip: { en: "Imperative verbs ('Squeeze', 'Garnish') start direct recipe instructions.", es: "Los verbos imperativos ('Squeeze', 'Garnish') inician instrucciones directas." }
+                },
+                challengePrompt: {
+                    en: "Write one appetizing Mexican menu item description in English:",
+                    es: "Escribe una descripción apetitosa de un plato mexicano en inglés:"
+                },
+                placeholder: "e.g., Grilled street corn topped with smoky chili powder and fresh lime..."
+            },
+            co: {
+                shortLabel: { en: "Colombia Trial", es: "Prueba Colombia" },
+                title: "🇨🇴 Module 2: Colombia (A2 Prepare)",
+                badgeName: "Colombian Arepa Artisan",
+                discover: {
+                    en: "Colombian arepas vary across every region—from sweet yellow corn in Antioquia to cheese-stuffed arepas in Boyacá. Food connects geography, family, and daily ritual.",
+                    es: "Las arepas colombianas varían en cada región: desde maíz amarillo dulce en Antioquia hasta arepas rellenas de queso en Boyacá."
+                },
+                words: [
+                    { en: "Knead", es: "Amasar" },
+                    { en: "Griddle", es: "Budare / Plancha" },
+                    { en: "Cornmeal", es: "Harina de maíz" },
+                    { en: "Melted Cheese", es: "Queso derretido" },
+                    { en: "Flip", es: "Voltear" },
+                    { en: "Golden Crust", es: "Corteza dorada" }
+                ],
+                question: {
+                    en: "Watch & Answer: After mixing warm water, salt, and cornmeal, what is the next step?",
+                    es: "Observa y Responde: Después de mezclar agua tibia, sal y harina de maíz, ¿cuál es el siguiente paso?"
+                },
+                options: [
+                    { text: "Knead the dough until smooth, then shape into flat discs.", correct: true },
+                    { text: "Boil the dry flour in cold oil for two hours.", correct: false },
+                    { text: "Freeze the cheese before opening the package.", correct: false }
+                ],
+                cookingPhrase: {
+                    phrase: "“Sear each arepa on a medium-hot griddle for 4 minutes until a golden crust forms.”",
+                    tip: { en: "Use 'until + result' to explain exact cooking duration in English.", es: "Usa 'until + resultado' para explicar la duración exacta de cocción." }
+                },
+                challengePrompt: {
+                    en: "My Colombian Cooking Challenge — Write 2 steps of your arepa tutorial:",
+                    es: "Mi Desafío Culinario Colombiano — Escribe 2 pasos de tu tutorial de arepa:"
+                },
+                placeholder: "First, mix warm water and cornmeal. Next, knead the dough and grill until golden..."
+            },
+            jp: {
+                shortLabel: { en: "Japan Trial", es: "Prueba Japón" },
+                title: "🇯🇵 Module 3: Japan (B1 Explore)",
+                badgeName: "Washoku Cultural Ambassador",
+                discover: {
+                    en: "Washoku (traditional Japanese cuisine) emphasizes seasonal harmony, visual balance, and umami—the fifth savory taste discovered in dashi broth.",
+                    es: "Washoku (cocina tradicional japonesa) enfatiza la armonía estacional, el equilibrio visual y el umami: el quinto sabor descubierto en el caldo dashi."
+                },
+                words: [
+                    { en: "Umami", es: "Sabor sabroso profundo" },
+                    { en: "Simmer", es: "Cocinar a fuego lento" },
+                    { en: "Etiquette", es: "Protocolo en la mesa" },
+                    { en: "Seasonality", es: "Estacionalidad" },
+                    { en: "Broth", es: "Caldo concentrado" },
+                    { en: "Mindful Dining", es: "Alimentación consciente" }
+                ],
+                question: {
+                    en: "Which sentence best compares Japanese ramen culture with Western soup traditions?",
+                    es: "¿Qué oración compara mejor la cultura del ramen japonés con las sopas occidentales?"
+                },
+                options: [
+                    { text: "Whereas Western etiquette discourages noise, slurping ramen in Japan shows appreciation.", correct: true },
+                    { text: "Ramen is soup that Japan eats more loud than soup.", correct: false },
+                    { text: "In Japan, people never drink broth with noodles.", correct: false }
+                ],
+                cookingPhrase: {
+                    phrase: "“Unlike heavy cream sauces, dashi relies on kelp and bonito for clean umami complexity.”",
+                    tip: { en: "Use 'Unlike X, Y relies on...' for sophisticated B1 cultural contrasts.", es: "Usa 'Unlike X, Y relies on...' para contrastes culturales nivel B1." }
+                },
+                challengePrompt: {
+                    en: "Compare one Japanese dining custom with a custom from your own country:",
+                    es: "Compara una costumbre gastronómica japonesa con una de tu propio país:"
+                },
+                placeholder: "While in my country we always use forks, in Japan chopsticks are central to..."
+            },
+            fr: {
+                shortLabel: { en: "France Trial", es: "Prueba Francia" },
+                title: "🇫🇷 Module 4: France (B2 Share)",
+                badgeName: "Gastronomic Debate Fellow",
+                discover: {
+                    en: "In France, 'Terroir' expresses how soil, climate, and centuries of artisanal tradition shape flavor—turning gastronomy into protected cultural heritage.",
+                    es: "En Francia, 'Terroir' expresa cómo el suelo, el clima y siglos de tradición artesanal moldean el sabor, convirtiendo la gastronomía en patrimonio cultural."
+                },
+                words: [
+                    { en: "Terroir", es: "Identidad de origen y suelo" },
+                    { en: "Artisanal Heritage", es: "Patrimonio artesanal" },
+                    { en: "Flavor Nuance", es: "Matiz de sabor" },
+                    { en: "Flaky Pastry", es: "Hojaldre crujiente" },
+                    { en: "Persuasive Critique", es: "Crítica persuasiva" },
+                    { en: "Gastronomic Identity", es: "Identidad gastronómica" }
+                ],
+                question: {
+                    en: "How do you diplomatically defend traditional culinary craftsmanship in a B2 debate?",
+                    es: "¿Cómo defiendes diplomáticamente la artesanía culinaria tradicional en un debate B2?"
+                },
+                options: [
+                    { text: "While industrial efficiency lowers costs, preserving terroir safeguards irreplaceable cultural identity.", correct: true },
+                    { text: "Fast food is bad because French bread is better always.", correct: false },
+                    { text: "People shouldn't argue about food history ever.", correct: false }
+                ],
+                cookingPhrase: {
+                    phrase: "“Beneath its flaky caramelized layers, a true croissant balances cultured butter with subtle fermentation.”",
+                    tip: { en: "Layered sensory clauses elevate B2 descriptive and analytical speaking.", es: "Las cláusulas sensoriales elevan la expresión analítica de nivel B2." }
+                },
+                challengePrompt: {
+                    en: "Defend your viewpoint: Why should traditional local recipes be protected?",
+                    es: "Defiende tu postura: ¿Por qué deben protegerse las recetas tradicionales locales?"
+                },
+                placeholder: "I strongly believe that traditional recipes carry living history because..."
+            }
+        };
+
+        const faqData = [
+            {
+                q: { en: "How does the CEFR progression (A1 → B2) work in World Bites?", es: "¿Cómo funciona la progresión MCER (A1 → B2) en World Bites?" },
+                a: {
+                    en: "Each destination aligns with an international CEFR milestone: Mexico builds A1 foundational vocabulary, Colombia develops A2 step-by-step narration, Japan expands B1 cultural comparison, and France masters B2 persuasive debate.",
+                    es: "Cada destino está alineado con un nivel internacional MCER: México construye bases A1, Colombia desarrolla narración paso a paso A2, Japón expande comparación cultural B1 y Francia domina el debate persuasivo B2."
+                }
+            },
+            {
+                q: { en: "How is each module structured?", es: "¿Cómo está estructurado cada módulo?" },
+                a: {
+                    en: "Every module contains 6 cinematic episodes, interactive word banks, pronunciation labs, cultural kitchen challenges, and a capstone Final Project reviewed by your mentor.",
+                    es: "Cada módulo incluye 6 episodios cinematográficos, bancos de vocabulario interactivos, laboratorios de pronunciación, retos culinarios y un Proyecto Final evaluado por tu mentor."
+                }
+            },
+            {
+                q: { en: "Will I receive an official certificate upon completion?", es: "¿Recibiré un certificado oficial al completar el programa?" },
+                a: {
+                    en: "Yes! Graduates of the Complete Culinary Journey receive a verifiable digital & printable World Bites CEFR Culinary English Certificate suitable for LinkedIn and academic portfolios.",
+                    es: "¡Sí! Quienes completan el Viaje Culinario Completo reciben un Certificado Oficial verificable de World Bites listo para LinkedIn y portafolios profesionales."
+                }
+            },
+            {
+                q: { en: "What technology or kitchen equipment do I need?", es: "¿Qué tecnología o equipo de cocina necesito?" },
+                a: {
+                    en: "Any smartphone, tablet, or computer with internet access works seamlessly. Recipes are designed for everyday home kitchens—and cooking along is encouraged, never mandatory.",
+                    es: "Cualquier teléfono, tableta o computadora con internet funciona perfectamente. Las recetas están diseñadas para cocinas caseras cotidianas y cocinar es opcional."
+                }
+            },
+            {
+                q: { en: "Can I start with one module and upgrade later?", es: "¿Puedo empezar con un solo módulo y actualizar después?" },
+                a: {
+                    en: "Absolutely. You can enroll in any single destination ($79) and upgrade to the Complete Culinary Journey at any time by paying only the difference.",
+                    es: "Por supuesto. Puedes inscribirte en un módulo individual ($79) y actualizar al Viaje Culinario Completo cuando quieras pagando solo la diferencia."
+                }
+            }
+        ];
+
+        const storiesData = [
+            {
+                name: "Valeria Mendoza",
+                country: "🇨🇴 Medellín, Colombia",
+                module: "Completed: Complete Journey (A1 → B2)",
+                photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+                quote: {
+                    en: "“I tried traditional English apps for years and quit every time. Cooking arepas in Module 2 and debating French terroir in Module 4 gave me the confidence to land an international hospitality role!”",
+                    es: "“Probé aplicaciones tradicionales durante años y siempre abandonaba. Cocinar arepas en el Módulo 2 y debatir sobre terroir francés en el Módulo 4 me dio la confianza para conseguir un empleo internacional.”"
+                }
+            },
+            {
+                name: "Diego Morales",
+                country: "🇲🇽 Guadalajara, Mexico",
+                module: "Completed: Module 3 Japan (B1 Explore)",
+                photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+                quote: {
+                    en: "“World Bites feels like watching a Netflix food documentary where you are the protagonist. My speaking fluency jumped dramatically because every word was tied to a real recipe.”",
+                    es: "“World Bites se siente como ver un documental gastronómico de Netflix donde tú eres el protagonista. Mi fluidez al hablar creció enormemente porque cada palabra estaba conectada a una receta real.”"
+                }
+            },
+            {
+                name: "Anaïs Laurent",
+                country: "🇫🇷 Lyon, France",
+                module: "Completed: Module 1 & 2 (A1 → A2)",
+                photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80",
+                quote: {
+                    en: "“Learning English while discovering Latin American gastronomy was pure magic. The interactive word banks and instructor feedback made every lesson unforgettable.”",
+                    es: "“Aprender inglés mientras descubría la gastronomía latinoamericana fue pura magia. Los bancos de vocabulario interactivos y la guía de los mentores hicieron cada clase inolvidable.”"
+                }
+            }
+        ];
+
+        /* ----------------------------------------------------------------------
+           3. MULTI-PAGE NAVIGATION ROUTER
+           ---------------------------------------------------------------------- */
+        function navigateTo(pageId) {
+            currentPage = pageId;
+            document.querySelectorAll('.page-view').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(`page-${pageId}`);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.page === pageId);
+            });
+
+            document.getElementById('navLinks').classList.remove('open');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        function openTrialFor(countryKey) {
+            navigateTo('trials');
+            loadTrialModule(countryKey);
+        }
+
+        /* ----------------------------------------------------------------------
+           4. BILINGUAL SWITCHER (ENGLISH / ESPAÑOL)
+           ---------------------------------------------------------------------- */
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.textContent = i18n[lang][key];
+                }
+            });
+
+            const activePin = document.querySelector('.country-pin.active-pin');
+            const activeCode = activePin && activePin.classList.contains('pin-colombia') ? 'co'
+                : activePin && activePin.classList.contains('pin-japan') ? 'jp'
+                : activePin && activePin.classList.contains('pin-france') ? 'fr' : 'mx';
+
+            inspectCountry(activeCode);
+            selectJourneyLevel(currentJourneyLevel);
+            renderTrialWorkspace();
+            renderFAQ();
+            renderTestimonial();
+        }
+
+        /* ----------------------------------------------------------------------
+           5. HOME PAGE: INTERACTIVE WORLD MAP INSPECTOR
+           ---------------------------------------------------------------------- */
+        function inspectCountry(code) {
+            const data = mapData[code];
+            if (!data) return;
+
+            document.querySelectorAll('.country-pin').forEach(p => p.classList.remove('active-pin'));
+            const mapClass = { mx: '.pin-mexico', co: '.pin-colombia', jp: '.pin-japan', fr: '.pin-france' }[code];
+            const pinEl = document.querySelector(mapClass);
+            if (pinEl) pinEl.classList.add('active-pin');
+
+            document.getElementById('insp-flag').textContent = data.flag;
+            document.getElementById('insp-country').textContent = data.name[currentLang];
+            const lvlEl = document.getElementById('insp-level');
+            lvlEl.textContent = data.level[currentLang];
+            lvlEl.style.cssText = data.badgeStyle + " padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800;";
+            document.getElementById('insp-theme').textContent = data.theme[currentLang];
+            document.getElementById('insp-goal').textContent = data.goal[currentLang];
+        }
+
+        /* ----------------------------------------------------------------------
+           6. LEARNING JOURNEY TIMELINE INTERACTION
+           ---------------------------------------------------------------------- */
+        function selectJourneyLevel(lvl) {
+            currentJourneyLevel = lvl;
+            ['A1', 'A2', 'B1', 'B2'].forEach(code => {
+                const node = document.getElementById(`node-${code}`);
+                if (node) node.classList.toggle('active', code === lvl);
+            });
+
+            const d = journeyData[lvl];
+            const panel = document.getElementById('journeyDetailPanel');
+            const objLabel = currentLang === 'en' ? 'Core Learning Objectives:' : 'Objetivos Clave de Aprendizaje:';
+            const skillsLabel = currentLang === 'en' ? 'Target Skills:' : 'Habilidades Clave:';
+            const chalLabel = currentLang === 'en' ? 'FINAL CAPSTONE CHALLENGE' : 'RETO FINAL DEL NIVEL';
+            const btnLabel = currentLang === 'en' ? 'Test This Level Free →' : 'Probar Este Nivel Gratis →';
+            const keyMap = { A1: 'mx', A2: 'co', B1: 'jp', B2: 'fr' };
+
+            panel.innerHTML = `
+                <div>
+                    <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.85rem;">
+                        <span style="background: rgba(226,177,101,0.22); color: var(--warm-gold-light); border: 1px solid var(--warm-gold); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.78rem; font-weight: 800;">${d.badge}</span>
+                        <span style="font-weight: 700; color: var(--colombia-yellow);">${d.country}</span>
+                    </div>
+                    <h3 style="font-size: 2.1rem; margin-bottom: 0.75rem;">${d.title[currentLang]}</h3>
+                    <strong style="font-size: 0.84rem; color: var(--warm-gold); text-transform: uppercase; letter-spacing: 0.08em;">${objLabel}</strong>
+                    <ul class="detail-list">
+                        ${d.objectives[currentLang].map(item => `<li><span class="check">✦</span> <span>${item}</span></li>`).join('')}
+                    </ul>
+                    <div style="margin-top: 1.25rem; font-size: 0.92rem; color: var(--text-secondary);">
+                        <strong style="color: var(--text-primary);">${skillsLabel}</strong> ${d.skills[currentLang]}
+                    </div>
+                    <div class="module-project-box">
+                        <div style="font-size: 0.75rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em;">${chalLabel}</div>
+                        <div style="font-weight: 700; margin-top: 0.2rem;">${d.challenge[currentLang]}</div>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1.5rem;" onclick="openTrialFor('${keyMap[lvl]}')">${btnLabel}</button>
+                </div>
+                <div style="border-radius: var(--radius-lg); overflow: hidden; height: 340px; border: 1px solid var(--navy-border);">
+                    <img src="${d.img}" alt="${d.country}" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            `;
+        }
+
+        /* ----------------------------------------------------------------------
+           7. FREE MODULE TRIALS (5-STAGE PROGRESSIVE STEPPER + LIVE TRANSLATION)
+           ---------------------------------------------------------------------- */
+        const trialState = {
+            mx: { words: [], quizDone: false, phraseDone: false, challengeDone: false },
+            co: { words: [], quizDone: false, phraseDone: false, challengeDone: false },
+            jp: { words: [], quizDone: false, phraseDone: false, challengeDone: false },
+            fr: { words: [], quizDone: false, phraseDone: false, challengeDone: false }
+        };
+
+        function isModuleCompleted(k) {
+            const s = trialState[k];
+            return s.words.length >= 2 && s.quizDone && s.phraseDone && s.challengeDone;
+        }
+
+        function updateTrialTabsBadges() {
+            ['mx', 'co', 'jp', 'fr'].forEach(k => {
+                const titleEl = document.getElementById(`tab-title-${k}`);
+                if (!titleEl) return;
+                const d = trialModulesData[k];
+                const completed = isModuleCompleted(k);
+                titleEl.innerHTML = `${d.shortLabel[currentLang]}${completed ? `<span class="module-earned-pill">🏅 ${d.badgeName}</span>` : ''}`;
+            });
+        }
+
+        function loadTrialModule(key) {
+            currentTrialKey = key;
+            currentTrialStage = 0;
+            ['mx', 'co', 'jp', 'fr'].forEach(k => {
+                const btn = document.getElementById(`tab-trial-${k}`);
+                if (btn) btn.classList.toggle('active', k === key);
+            });
+            renderTrialWorkspace();
+        }
+
+        function setTrialStage(stageIdx) {
+            currentTrialStage = stageIdx;
+            renderTrialWorkspace();
+        }
+
+        function renderTrialWorkspace() {
+            updateTrialTabsBadges();
+            const data = trialModulesData[currentTrialKey];
+            const st = trialState[currentTrialKey];
+
+            let score = 20;
+            if (st.words.length >= 2) score += 20;
+            if (st.quizDone) score += 20;
+            if (st.phraseDone) score += 20;
+            if (st.challengeDone) score += 20;
+
+            const allFourCompleted = ['mx', 'co', 'jp', 'fr'].every(k => isModuleCompleted(k));
+
+            const stagesMeta = currentLang === 'en'
+                ? [
+                    { num: "STAGE 1", name: "Discover Culture", done: true },
+                    { num: "STAGE 2", name: "Word Bank", done: st.words.length >= 2 },
+                    { num: "STAGE 3", name: "Watch & Answer", done: st.quizDone },
+                    { num: "STAGE 4", name: "Cooking English", done: st.phraseDone },
+                    { num: "STAGE 5", name: "Final Challenge", done: st.challengeDone }
+                ]
+                : [
+                    { num: "ETAPA 1", name: "Cultura", done: true },
+                    { num: "ETAPA 2", name: "Vocabulario", done: st.words.length >= 2 },
+                    { num: "ETAPA 3", name: "Pregunta", done: st.quizDone },
+                    { num: "ETAPA 4", name: "Inglés Culinario", done: st.phraseDone },
+                    { num: "ETAPA 5", name: "Reto Final", done: st.challengeDone }
+                ];
+
+            let stageBodyHtml = '';
+
+            if (currentTrialStage === 0) {
+                stageBodyHtml = `
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                        ${currentLang === 'en' ? 'STAGE 1 OF 5 · DISCOVER CULTURAL CONTEXT' : 'ETAPA 1 DE 5 · DESCUBRE EL CONTEXTO CULTURAL'}
+                    </div>
+                    <h4 style="font-size: 1.55rem; margin-bottom: 1rem;">${data.title}</h4>
+                    <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.75rem;">
+                        ${data.discover[currentLang]}
+                    </p>
+                    <button class="btn-primary" onclick="setTrialStage(1)">
+                        ${currentLang === 'en' ? 'Continue to Stage 2: Word Bank →' : 'Continuar a Etapa 2: Vocabulario →'}
+                    </button>
+                `;
+            } else if (currentTrialStage === 1) {
+                stageBodyHtml = `
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                        ${currentLang === 'en' ? 'STAGE 2 OF 5 · INTERACTIVE BILINGUAL WORD BANK' : 'ETAPA 2 DE 5 · BANCO DE VOCABULARIO INTERACTIVO'}
+                    </div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 0.45rem;">
+                        ${currentLang === 'en' ? 'Click any English word to translate it to Spanish & collect it (min. 2)' : 'Haz clic en cualquier palabra en inglés para traducirla al español y guardarla (mín. 2)'}
+                    </h4>
+                    <div class="vocab-chips">
+                        ${data.words.map((w, idx) => {
+                            const isTranslated = st.words.includes(idx);
+                            return `
+                                <button class="vocab-chip ${isTranslated ? 'collected' : ''}" onclick="toggleTrialWord(${idx})">
+                                    <span>${isTranslated ? '🇪🇸 ' + w.es : '🇺🇸 ' + w.en}</span>
+                                    <span style="font-size: 0.75rem; opacity: 0.85;">${isTranslated ? '✓' : '↻'}</span>
+                                </button>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                        <button class="btn-secondary" onclick="setTrialStage(0)">← ${currentLang === 'en' ? 'Previous' : 'Anterior'}</button>
+                        <button class="btn-primary" onclick="setTrialStage(2)">
+                            ${currentLang === 'en' ? 'Continue to Stage 3: Watch & Answer →' : 'Continuar a Etapa 3: Pregunta →'}
+                        </button>
+                    </div>
+                `;
+            } else if (currentTrialStage === 2) {
+                stageBodyHtml = `
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                        ${currentLang === 'en' ? 'STAGE 3 OF 5 · WATCH & ANSWER COMPREHENSION' : 'ETAPA 3 DE 5 · OBSERVA Y RESPONDE'}
+                    </div>
+                    <h4 style="font-size: 1.45rem; margin-bottom: 1rem;">${data.question[currentLang]}</h4>
+                    <div style="max-width: 720px;">
+                        ${data.options.map((opt) => `
+                            <button class="quiz-option ${st.quizDone && opt.correct ? 'correct' : ''}"
+                                    onclick="answerTrialQuiz(this, ${opt.correct})">
+                                ${opt.text}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                        <button class="btn-secondary" onclick="setTrialStage(1)">← ${currentLang === 'en' ? 'Previous' : 'Anterior'}</button>
+                        <button class="btn-primary" onclick="setTrialStage(3)">
+                            ${currentLang === 'en' ? 'Continue to Stage 4: Cooking English →' : 'Continuar a Etapa 4: Inglés Culinario →'}
+                        </button>
+                    </div>
+                `;
+            } else if (currentTrialStage === 3) {
+                stageBodyHtml = `
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                        ${currentLang === 'en' ? 'STAGE 4 OF 5 · COOKING ENGLISH IN ACTION' : 'ETAPA 4 DE 5 · INGLÉS CULINARIO EN ACCIÓN'}
+                    </div>
+                    <h4 style="font-size: 1.45rem; margin-bottom: 1rem;">${data.cookingPhrase.phrase}</h4>
+                    <p style="font-size: 0.96rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                        💡 ${data.cookingPhrase.tip[currentLang]}
+                    </p>
+                    <button class="btn-secondary" style="border-color: var(--warm-gold);" onclick="practiceCookingPhrase()">
+                        🔊 ${st.phraseDone ? (currentLang === 'en' ? 'Pronunciation Practiced ✓' : 'Pronunciación Practicada ✓') : (currentLang === 'en' ? 'Practice Expression Aloud' : 'Practicar Expresión en Voz Alta')}
+                    </button>
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                        <button class="btn-secondary" onclick="setTrialStage(2)">← ${currentLang === 'en' ? 'Previous' : 'Anterior'}</button>
+                        <button class="btn-primary" onclick="setTrialStage(4)">
+                            ${currentLang === 'en' ? 'Continue to Stage 5: Final Challenge →' : 'Continuar a Etapa 5: Reto Final →'}
+                        </button>
+                    </div>
+                `;
+            } else {
+                stageBodyHtml = `
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+                        ${currentLang === 'en' ? 'STAGE 5 OF 5 · FINAL CULINARY CHALLENGE' : 'ETAPA 5 DE 5 · RETO CULINARIO FINAL'}
+                    </div>
+                    <h4 style="font-size: 1.45rem; margin-bottom: 0.85rem;">${data.challengePrompt[currentLang]}</h4>
+                    <textarea id="trialChallengeInput" class="form-control" rows="3" placeholder="${data.placeholder}"></textarea>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                        <button class="btn-secondary" onclick="setTrialStage(3)">← ${currentLang === 'en' ? 'Previous' : 'Anterior'}</button>
+                        <button class="btn-primary" onclick="submitTrialChallenge()">
+                            ${currentLang === 'en' ? 'Complete Module & Unlock Badge 🏆' : 'Completar Módulo y Desbloquear Insignia 🏆'}
+                        </button>
+                    </div>
+                `;
+            }
+
+            const allCompleteHtml = allFourCompleted ? `
+                <div class="all-complete-banner">
+                    <div style="max-width: 720px;">
+                        <div style="font-size: 0.8rem; font-weight: 800; color: var(--colombia-yellow); letter-spacing: 0.12em;">
+                            🎉 ${currentLang === 'en' ? 'ALL 4 CULINARY TRIALS COMPLETED!' : '¡LOS 4 MÓDULOS DE PRUEBA COMPLETADOS!'}
+                        </div>
+                        <h3 style="font-size: 1.65rem; margin: 0.3rem 0;">
+                            ${currentLang === 'en' ? 'You Earned All 4 Destination Badges (A1 → B2)!' : '¡Ganaste las 4 Insignias de Destino (A1 → B2)!'}
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.96rem;">
+                            ${currentLang === 'en'
+                                ? 'You are ready to begin your official World Bites Culinary English journey with live mentor feedback and our companion recipe book.'
+                                : 'Ya estás listo para comenzar tu viaje oficial en World Bites con mentoría en vivo y nuestro libro de recetas.'}
+                        </p>
+                    </div>
+                    <button class="btn-primary" onclick="navigateTo('pricing')">
+                        ${currentLang === 'en' ? 'Enroll Now & Claim Your Passport →' : 'Inscribirme Ahora y Reclamar Mi Pasaporte →'}
+                    </button>
+                </div>
+            ` : '';
+
+            const ws = document.getElementById('trialWorkspace');
+            ws.innerHTML = `
+                <div class="progress-header">
+                    <div style="flex: 1; min-width: 260px;">
+                        <h3 style="font-size: 1.65rem;">
+                            ${data.title}
+                            ${score === 100 ? `<span class="module-earned-pill">🏅 ${data.badgeName}</span>` : ''}
+                        </h3>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                            ${currentLang === 'en' ? 'Stage Progress:' : 'Progreso de Etapas:'} <strong style="color: var(--colombia-yellow);">${score}%</strong>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill" style="width: ${score}%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-badge-box">
+                        <div class="badge-medal ${score === 100 ? 'unlocked' : ''}">🏅</div>
+                        <div>
+                            <div style="font-size: 0.72rem; font-weight: 800; color: var(--warm-gold); letter-spacing: 0.08em;">
+                                ${score === 100 ? (currentLang === 'en' ? 'BADGE UNLOCKED!' : '¡INSIGNIA DESBLOQUEADA!') : (currentLang === 'en' ? 'ACHIEVEMENT PREVIEW' : 'VISTA PREVIA DE INSIGNIA')}
+                            </div>
+                            <div style="font-weight: 700; font-size: 0.95rem;">${data.badgeName}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-stepper">
+                    ${stagesMeta.map((s, idx) => `
+                        <button class="stage-pill ${currentTrialStage === idx ? 'current' : ''} ${s.done ? 'completed' : ''}"
+                                onclick="setTrialStage(${idx})">
+                            <div style="font-size: 0.7rem; font-weight: 800; color: var(--warm-gold);">${s.done ? '✓ ' : ''}${s.num}</div>
+                            <div style="font-size: 0.86rem; font-weight: 700; margin-top: 0.15rem;">${s.name}</div>
+                        </button>
+                    `).join('')}
+                </div>
+
+                <div class="stage-content-box">
+                    ${stageBodyHtml}
+                </div>
+
+                ${allCompleteHtml}
+            `;
+        }
+
+        function toggleTrialWord(idx) {
+            const arr = trialState[currentTrialKey].words;
+            const pos = arr.indexOf(idx);
+            const wordObj = trialModulesData[currentTrialKey].words[idx];
+            if (pos === -1) {
+                arr.push(idx);
+                showToast(`🇺🇸 "${wordObj.en}" → 🇪🇸 "${wordObj.es}"`);
+            } else {
+                arr.splice(pos, 1);
+            }
+            renderTrialWorkspace();
+        }
+
+        function answerTrialQuiz(btn, isCorrect) {
+            document.querySelectorAll('#trialWorkspace .quiz-option').forEach(opt => {
+                opt.classList.remove('wrong', 'correct');
+            });
+
+            if (isCorrect) {
+                trialState[currentTrialKey].quizDone = true;
+                showToast(currentLang === 'en' ? 'Correct! Stage 3 complete.' : '¡Correcto! Etapa 3 completada.');
+                renderTrialWorkspace();
+            } else {
+                trialState[currentTrialKey].quizDone = false;
+                btn.classList.add('wrong');
+                playErrorSound();
+                showToast(currentLang === 'en' ? 'Try another option!' : '¡Intenta con otra opción!');
+            }
+        }
+
+        function practiceCookingPhrase() {
+            trialState[currentTrialKey].phraseDone = true;
+            showToast(currentLang === 'en' ? 'Expression practiced! Stage 4 complete.' : '¡Expresión practicada! Etapa 4 completada.');
+            renderTrialWorkspace();
+        }
+
+        function submitTrialChallenge() {
+            const input = document.getElementById('trialChallengeInput');
+            if (!input || input.value.trim().length < 5) {
+                showToast(currentLang === 'en' ? 'Write a short response in English first!' : '¡Escribe una respuesta corta en inglés primero!');
+                return;
+            }
+            if (trialState[currentTrialKey].words.length < 2) {
+                trialState[currentTrialKey].words = [0, 1];
+            }
+            trialState[currentTrialKey].quizDone = true;
+            trialState[currentTrialKey].phraseDone = true;
+            trialState[currentTrialKey].challengeDone = true;
+
+            renderTrialWorkspace();
+            showToast(currentLang === 'en'
+                ? `🎉 Badge Unlocked: ${trialModulesData[currentTrialKey].badgeName}!`
+                : `🎉 ¡Insignia Desbloqueada: ${trialModulesData[currentTrialKey].badgeName}!`);
+        }
+
+        /* ----------------------------------------------------------------------
+           8. FAQ, TESTIMONIAL CAROUSEL, PRICING & CONTACT HANDLERS
+           ---------------------------------------------------------------------- */
+        function renderFAQ() {
+            const list = document.getElementById('faqList');
+            list.innerHTML = faqData.map((item, idx) => `
+                <div class="faq-item ${idx === 0 ? 'open' : ''}">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        <span>${item.q[currentLang]}</span>
+                        <span class="faq-icon" style="font-size: 1.4rem; transition: transform 0.3s;">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>${item.a[currentLang]}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderTestimonial() {
+            const s = storiesData[currentStoryIndex];
+            document.getElementById('testimonialSlide').innerHTML = `
+                <div class="testimonial-slide">
+                    <img src="${s.photo}" alt="${s.name}" class="student-photo">
+                    <div>
+                        <div style="color: var(--colombia-yellow); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 0.5rem;">${s.module}</div>
+                        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-style: italic; line-height: 1.45; margin-bottom: 1.25rem; color: var(--text-primary);">
+                            ${s.quote[currentLang]}
+                        </p>
+                        <div style="font-weight: 800; font-size: 1.05rem;">${s.name}</div>
+                        <div style="color: var(--text-muted); font-size: 0.88rem;">${s.country}</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('carouselDots').innerHTML = storiesData.map((_, i) => `
+                <button onclick="goToStory(${i})" style="width: ${i === currentStoryIndex ? '26px' : '10px'}; height: 10px; border-radius: 999px; background: ${i === currentStoryIndex ? 'var(--warm-gold)' : 'rgba(255,255,255,0.28)'}; transition: all 0.3s;"></button>
+            `).join('');
+        }
+
+        function nextStory() {
+            currentStoryIndex = (currentStoryIndex + 1) % storiesData.length;
+            renderTestimonial();
+        }
+
+        function prevStory() {
+            currentStoryIndex = (currentStoryIndex - 1 + storiesData.length) % storiesData.length;
+            renderTestimonial();
+        }
+
+        function goToStory(i) {
+            currentStoryIndex = i;
+            renderTestimonial();
+        }
+
+        function selectSingleDest(btn, label) {
+            selectedSingleDestination = label;
+            document.querySelectorAll('.dest-choice').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        function enrollSelectedSingle() {
+            triggerEnrollment(`Single Module: ${selectedSingleDestination} ($79)`);
+        }
+
+        function triggerEnrollment(planName) {
+            navigateTo('contact');
+            const select = document.getElementById('contactInterest');
+            if (select) {
+                const opt = document.createElement('option');
+                opt.value = planName;
+                opt.textContent = `Selected: ${planName}`;
+                opt.selected = true;
+                select.prepend(opt);
+            }
+            showToast(currentLang === 'en'
+                ? `Selected ${planName}. Complete your admissions form below!`
+                : `Seleccionaste ${planName}. ¡Completa tu formulario abajo!`);
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast(currentLang === 'en'
+                ? 'Application received! Our culinary admissions team will contact you shortly.'
+                : '¡Solicitud recibida! Nuestro equipo de admisiones te contactará pronto.');
+            e.target.reset();
+        }
+
+        let toastTimer;
+        function showToast(msg) {
+            const box = document.getElementById('toastBox');
+            document.getElementById('toastMessage').textContent = msg;
+            box.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => box.classList.remove('show'), 3600);
+        }
+
+        /* ----------------------------------------------------------------------
+           9. INITIALIZATION ON WINDOW LOAD
+           ---------------------------------------------------------------------- */
+        window.onload = function () {
+            inspectCountry('mx');
+            selectJourneyLevel('A1');
+            renderTrialWorkspace();
+            renderFAQ();
+            renderTestimonial();
+        };
+    </script>
+</body>
+</html>
